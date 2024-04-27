@@ -62,7 +62,7 @@ public class WatsonEngine {
             loadData(inputFilePath, writer);
 
 
-        } catch (IOException ignore) {
+        } catch (Exception ignore) {
 
         }
 
@@ -121,31 +121,36 @@ public class WatsonEngine {
 
     }
 
-    private static void loadData(String directory, IndexWriter writer) throws Exception {
+    private static void loadData(String directory, IndexWriter writer) throws IOException {
         File directory_structure = new File(directory);
         File[] files = directory_structure.listFiles();
-
-        if (files == null || files.length == 0) {
-            throw new Exception("Directory was not found or is emoty!");
-        }
-
         int total_docs = 0;
 
-        String title = "";
-        String category = "";
-        String text = "";
+        for (File file : files) {
+            System.out.println("... Loading file: " + file);
+            byte[] bytes = Files.readAllBytes(file.toPath());
+            String content = new String(bytes);
 
-        System.out.println("... Loading wiki files: ");
+            String[] parts = content.split(
+                    "\n" +
+                            "\n" +
+                            "\\[\\[");
 
-        for (File fileName : files) {
-            try (Scanner scanner = new Scanner(fileName)) {
+            for (int i = 1; i < parts.length; i++) {
+                String[] subParts = parts[i].split("]]", 2);
+                if (subParts.length > 1) {
+                    String docName = subParts[0].trim();
+                    String docText = docName + subParts[1].trim();
+                    addDoc(writer, docName, docText);
+                    total_docs += 1;
+                }
             }
-        }
 
+        }
         writer.commit();
 
         System.out.println("Total Documents Loaded: " + total_docs);
-        return;
+
     }
 
     private static HashMap<String, String> getQueryQuestions(String file_path) throws IOException {
