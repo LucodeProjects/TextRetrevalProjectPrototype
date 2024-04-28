@@ -167,8 +167,9 @@ public class WatsonEngine {
 
                 String clue = subParts[1].trim();
                 String answer = subParts[2].trim();
+                String query = category + clue ; // more tweaking needed
 
-                String query = "+" + String.join(" +", clue.split(" ")); // more tweaking needed
+               // String query = "+" + String.join(" +", clue.split(" ")); // more tweaking needed
                 //query = "+ " + category + " " + query;
                 // CATEGORY : TO USE OR NOT TO USE?
                 query_to_answer.put(query, answer);
