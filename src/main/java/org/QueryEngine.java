@@ -11,6 +11,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.apache.lucene.analysis.util.TokenFilterFactory.availableTokenFilters;
+
 public class QueryEngine {
     boolean indexExists = false;
     Directory index = null;
@@ -18,6 +20,8 @@ public class QueryEngine {
 
     public static void main(String[] args ) {
         try {
+            System.out.println(availableTokenFilters());
+
             System.out.println("******** Welcome to Project Prototyping! ********");
             System.out.println("**************** Creating Index! ****************");
             String[] query = {"information", "retrieval"};

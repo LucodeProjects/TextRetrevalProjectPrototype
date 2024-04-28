@@ -2,18 +2,28 @@ package org;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.*;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
+import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
+import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
+import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
+import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
+import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
+import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
+import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
+import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 
 import java.io.File;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 
@@ -29,43 +39,26 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.ByteBuffersDirectory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
-import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
-import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
-import org.apache.lucene.analysis.core.StopFilterFactory;
-import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
-import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
 
+import static org.apache.lucene.analysis.util.TokenFilterFactory.availableTokenFilters;
 
 public class WatsonEngine {
-    boolean indexExists = false;
-    String inputFilePath = "";
-    Analyzer sa = null;
-    Directory index_g = null;
+    String WIKI_FILES_DIRECTORY = "src\\main\\resources\\wiki-subset-20140602\\";
+    static String QUESTIONS_FILE = "src\\main\\resources\\questions.txt";
 
-    public WatsonEngine(String inputFile) throws IOException {
-        inputFilePath = inputFile;
-        buildIndex();
-    }
+    boolean indexExists = false;
+    Analyzer analyzer = null;
+    Directory index = null;
 
     private void buildIndex() throws IOException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        StandardAnalyzer analyzer = new StandardAnalyzer();
-        Directory index = new ByteBuffersDirectory();
-        IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        sa = analyzer;
-        index_g = index;
         try {
+            this.analyzer = new MyAnalyzer().get();
+            this.index = new ByteBuffersDirectory();
+            IndexWriterConfig config = new IndexWriterConfig(analyzer);
             IndexWriter writer = new IndexWriter(index, config);
-            loadData(inputFilePath, writer);
-
-
+            loadData(WIKI_FILES_DIRECTORY, writer);
         } catch (Exception ignore) {
-
         }
-
         indexExists = true;
     }
 
@@ -76,22 +69,19 @@ public class WatsonEngine {
 
 
         try {
-
-
-            Query q = new QueryParser("content", sa).parse(query);
+            Query q = new QueryParser("content", analyzer).parse(query);
             int hitsPerPage = 10;
-            IndexReader reader = DirectoryReader.open(index_g);
+            IndexReader reader = DirectoryReader.open(index);
             IndexSearcher searcher = new IndexSearcher(reader);
             TopDocs docs = searcher.search(q, hitsPerPage);
             ScoreDoc[] hits = docs.scoreDocs;
 
             List<String> ans = new ArrayList<>();
 
-            for (int i = 0; i < hits.length; ++i) {
-                int docId = hits[i].doc;
+            for (ScoreDoc hit : hits) {
+                int docId = hit.doc;
                 Document d = searcher.doc(docId);
                 ans.add(d.get("docid"));
-//                System.out.println("Doc: " + d.get("docid") + ", Score: " + hits[i].score);
             }
             return ans;
         } catch (ParseException e) {
@@ -102,11 +92,12 @@ public class WatsonEngine {
 
     public static void main(String[] args) {
         try {
-            String wiki_dir_name = "src/main/resources/wiki-subset-20140602";
-            String question_file = "src/main/resources/questions.txt";
+            System.out.println(availableTokenFilters() + "\n\n\n");
+
+
             System.out.println("******** Welcome to  Our Engine! ********");
-            WatsonEngine objQueryEngine = new WatsonEngine(wiki_dir_name);
-            HashMap queries= objQueryEngine.getQueryQuestions(question_file);
+            WatsonEngine objQueryEngine = new WatsonEngine();
+            HashMap<String, String> queries = getQueryQuestions(QUESTIONS_FILE);
             objQueryEngine.computeMRR(queries);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -114,6 +105,9 @@ public class WatsonEngine {
     }
 
     private static void addDoc(IndexWriter writer, String docName, String text) throws IOException {
+        text = docName + " " + text;
+        text = text.toLowerCase().replaceAll("==", " ").replaceAll("\\s+", " ");
+
         Document doc = new Document();
         doc.add(new StringField("docid", docName, Field.Store.YES));
         doc.add(new TextField("content", text, Field.Store.YES));
@@ -121,42 +115,60 @@ public class WatsonEngine {
 
     }
 
-    private static void loadData(String directory, IndexWriter writer) throws IOException {
-        File directory_structure = new File(directory);
-        File[] files = directory_structure.listFiles();
+    private static void loadData(String directory, IndexWriter writer) throws Exception {
+        Set<String> files = Stream.of(Objects.requireNonNull(new File(directory)
+                        .listFiles()))
+                .filter(file -> !file.isDirectory())
+                .map(File::getName)
+                .collect(Collectors.toSet());
+
+        System.out.println("... Loading files for indexing");
+
+        String pageTitle = "";
+        String pageCategory = "";
+        String pageText = "";
         int total_docs = 0;
 
-        for (File file : files) {
-            System.out.println("... Loading file: " + file);
-            byte[] bytes = Files.readAllBytes(file.toPath());
-            String content = new String(bytes);
+        files.remove("tester.txt");
+        //files.clear();
+        //files.add("tester.txt");
 
-            String[] parts = content.split(
-                    "\n" +
-                            "\n" +
-                            "\\[\\[");
+        for (String file : files) {
+            try(Scanner scanner = new Scanner(new File(directory + file))) {
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
 
-            for (int i = 1; i < parts.length; i++) {
-                String[] subParts = parts[i].split("]]", 2);
-                if (subParts.length > 1) {
-                    String docName = subParts[0].trim();
-                    String docText = docName + subParts[1].trim();
-                    addDoc(writer, docName, docText);
-                    total_docs += 1;
+                    if (line.startsWith("[[")) {
+                        if (!pageTitle.isEmpty()) {
+                            addDoc(writer, pageTitle, pageText);
+                            pageText = "";
+                        }
+
+                        // found page title
+                        pageTitle = line.trim();
+                        pageTitle = pageTitle.substring(2, pageTitle.length() - 2);
+                    }
+                    else {
+                        pageText += " " + line;
+                    }
                 }
-            }
 
+                // Add last page
+                addDoc(writer, pageTitle, pageText);
+
+                total_docs++;
+            }
+            catch(Exception ignore) {
+            }
         }
         writer.commit();
-
         System.out.println("Total Documents Loaded: " + total_docs);
-
     }
 
-    private static HashMap<String, String> getQueryQuestions(String file_path) throws IOException {
+    private static HashMap<String, String> getQueryQuestions(String file) throws IOException {
 
-        System.out.println("... Loading questions file: " + file_path);
-        byte[] bytes = Files.readAllBytes(Paths.get(file_path));
+        System.out.println("... Loading questions file: " + file);
+        byte[] bytes = Files.readAllBytes(Paths.get(file));
         String content = new String(bytes);
 
         HashMap<String, String> query_to_answer = new HashMap<>();
@@ -170,7 +182,8 @@ public class WatsonEngine {
                 String clue = subParts[1].trim();
                 String answer = subParts[2].trim();
 
-                String query =  "+" + String.join(" +", clue.split(" ")); // tweak this part
+                //String query =  "+" + String.join(" +", clue.split(" ")); // tweak this part
+                String query = clue.toLowerCase().trim();
                 query_to_answer.put(query, answer);
             }
         }
@@ -178,7 +191,7 @@ public class WatsonEngine {
         return query_to_answer;
     }
 
-    public double computeMRR(HashMap<String, String> queryAnswers) {
+    public void computeMRR(HashMap<String, String> queryAnswers) {
         double mrr = 0;
         int answerPresent = 0;
         int total_queries = queryAnswers.size();
@@ -188,15 +201,16 @@ public class WatsonEngine {
             String answer = entry.getValue();
             try {
                 List<String> answers = queryIt(query);
-                if (answers.size() == 0) {
+                if (answers.isEmpty()) {
                     continue;
                 } else if (answers.contains(answer)) {
                     int rank = answers.indexOf(answer) + 1;
 
-                    mrr += 1 / rank;
+                    System.out.println("$$");
+                    mrr += (double) 1 / rank;
                     answerPresent++;
                 }
-                System.out.println("\nQuery: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n\n");
+                System.out.println("\nQuery: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
 
             } catch (Exception ignored) {
             }
@@ -205,7 +219,6 @@ public class WatsonEngine {
         System.out.println("\nMRR = " + meanmrr);
         System.out.println("\nAnswer was somewhere in predictions = " + answerPresent + " / " + total_queries);
 
-        return meanmrr;
     }
 }
 
@@ -223,14 +236,12 @@ class MyAnalyzer {
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
-                .addTokenFilter(StopFilterFactory.class, stopMap)
                 .addTokenFilter(ASCIIFoldingFilterFactory.class)
+                .addTokenFilter(StopFilterFactory.class, stopMap)
                 .addTokenFilter(EnglishPossessiveFilterFactory.class)
+                .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
-
-                // here is the Porter stemmer step:
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
-
                 .addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
                 .build();
     }
