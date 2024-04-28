@@ -1,5 +1,6 @@
 package org;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -12,11 +13,6 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
-
-import java.io.File;
-
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
@@ -27,17 +23,20 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.similarities.BM25Similarity;
+import org.apache.lucene.search.similarities.BooleanSimilarity;
+import org.apache.lucene.search.similarities.LMJelinekMercerSimilarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.ByteBuffersDirectory;
 import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
 import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
+import org.apache.lucene.analysis.en.PorterStemFilterFactory;
 import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
 import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
-
 
 public class WatsonEngine {
     boolean indexExists = false;
@@ -51,62 +50,65 @@ public class WatsonEngine {
     }
 
     private void buildIndex() throws IOException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        StandardAnalyzer analyzer = new StandardAnalyzer();
-        Directory index = new ByteBuffersDirectory();
-        IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        sa = analyzer;
-        index_g = index;
-        try {
-            IndexWriter writer = new IndexWriter(index, config);
+        sa = CustomAnalyzer.builder()
+            .withTokenizer(StandardTokenizerFactory.class)
+            .addTokenFilter(LowerCaseFilterFactory.class)
+            .addTokenFilter(StopFilterFactory.class)
+            .addTokenFilter(PorterStemFilterFactory.class)
+            .addTokenFilter(ASCIIFoldingFilterFactory.class)
+            .addTokenFilter(EnglishPossessiveFilterFactory.class)
+            .addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
+            .build();
+
+        index_g = new ByteBuffersDirectory();
+        IndexWriterConfig config = new IndexWriterConfig(sa);
+        try (IndexWriter writer = new IndexWriter(index_g, config)) {
             loadData(inputFilePath, writer);
-
-
-        } catch (Exception ignore) {
-
         }
-
         indexExists = true;
     }
 
-    public List<String> queryIt(String query) throws java.io.IOException {
+    public List<String> queryIt(String queryText) throws IOException {
         if (!indexExists) {
             buildIndex();
         }
-
-
+    
+        Query q = null;  
         try {
-
-
-            Query q = new QueryParser("content", sa).parse(query);
-            int hitsPerPage = 10;
-            IndexReader reader = DirectoryReader.open(index_g);
+            QueryParser parser = new QueryParser("content", sa);
+            q = parser.parse(queryText);
+        } catch (ParseException e) {
+            throw new RuntimeException("Error parsing query", e);
+        }
+    
+        try (IndexReader reader = DirectoryReader.open(index_g)) {
             IndexSearcher searcher = new IndexSearcher(reader);
-            TopDocs docs = searcher.search(q, hitsPerPage);
+            // for LMJelinekMercerSimilarity test
+            //float lambda = 0.5f; // Lambda parameter
+            if (q == null) {
+                throw new IllegalStateException("Query not properly initialized");
+            }
+            TopDocs docs = searcher.search(q, 10);
             ScoreDoc[] hits = docs.scoreDocs;
-
+    
             List<String> ans = new ArrayList<>();
-
             for (int i = 0; i < hits.length; ++i) {
                 int docId = hits[i].doc;
                 Document d = searcher.doc(docId);
                 ans.add(d.get("docid"));
-//                System.out.println("Doc: " + d.get("docid") + ", Score: " + hits[i].score);
             }
             return ans;
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
         }
-
     }
+    
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         try {
             String wiki_dir_name = "src/main/resources/wiki-subset-20140602";
             String question_file = "src/main/resources/questions.txt";
-            System.out.println("******** Welcome to  Our Engine! ********");
+            System.out.println("******** Welcome to Our Engine! ********");
             WatsonEngine objQueryEngine = new WatsonEngine(wiki_dir_name);
-            HashMap queries= objQueryEngine.getQueryQuestions(question_file);
+            HashMap queries = objQueryEngine.getQueryQuestions(question_file);
             objQueryEngine.computeMRR(queries);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -118,7 +120,6 @@ public class WatsonEngine {
         doc.add(new StringField("docid", docName, Field.Store.YES));
         doc.add(new TextField("content", text, Field.Store.YES));
         writer.addDocument(doc);
-
     }
 
     private static void loadData(String directory, IndexWriter writer) throws IOException {
@@ -145,16 +146,13 @@ public class WatsonEngine {
                     total_docs += 1;
                 }
             }
-
         }
         writer.commit();
 
         System.out.println("Total Documents Loaded: " + total_docs);
-
     }
 
     private static HashMap<String, String> getQueryQuestions(String file_path) throws IOException {
-
         System.out.println("... Loading questions file: " + file_path);
         byte[] bytes = Files.readAllBytes(Paths.get(file_path));
         String content = new String(bytes);
@@ -170,7 +168,9 @@ public class WatsonEngine {
                 String clue = subParts[1].trim();
                 String answer = subParts[2].trim();
 
-                String query =  "+" + String.join(" +", clue.split(" ")); // tweak this part
+                String query = "+" + String.join(" +", clue.split(" ")); // more tweaking needed
+                //query = "+ " + category + " " + query;
+                // CATEGORY : TO USE OR NOT TO USE?
                 query_to_answer.put(query, answer);
             }
         }
@@ -206,32 +206,5 @@ public class WatsonEngine {
         System.out.println("\nAnswer was somewhere in predictions = " + answerPresent + " / " + total_queries);
 
         return meanmrr;
-    }
-}
-
-class MyAnalyzer {
-
-    public Analyzer get() throws IOException {
-
-        Map<String, String> snowballParams = new HashMap<>();
-        snowballParams.put("language", "English");
-
-        Map<String, String> stopMap = new HashMap<>();
-        stopMap.put("words", "stopwords.txt");
-        stopMap.put("format", "wordset");
-
-        return CustomAnalyzer.builder()
-                .withTokenizer(StandardTokenizerFactory.class)
-                .addTokenFilter(LowerCaseFilterFactory.class)
-                .addTokenFilter(StopFilterFactory.class, stopMap)
-                .addTokenFilter(ASCIIFoldingFilterFactory.class)
-                .addTokenFilter(EnglishPossessiveFilterFactory.class)
-                .addTokenFilter(KeywordRepeatFilterFactory.class)
-
-                // here is the Porter stemmer step:
-                .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
-
-                .addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
-                .build();
     }
 }
