@@ -33,7 +33,11 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.ByteBuffersDirectory;
 
-
+/**
+ * The Watson Engine.
+ *
+ * @author Aryam Gomez, Amimul Ehsan Zoha, and Muaz Ali
+ */
 public class WatsonEngine {
     static String WIKI_FILES_DIRECTORY = "src\\main\\resources\\wiki-subset-20140602\\";
     static String QUESTIONS_FILE = "src\\main\\resources\\questions.txt";
@@ -41,14 +45,22 @@ public class WatsonEngine {
     Analyzer analyzer;
     Directory index;
 
+    /**
+     * Builds the Watson Engine.
+     */
     public WatsonEngine() throws IOException {
-        this.analyzer = new MyAnalyzer().get(0);
+        this.analyzer = new MyAnalyzer().get();
         this.index = new ByteBuffersDirectory();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         IndexWriter writer = new IndexWriter(index, config);
         loadData(WIKI_FILES_DIRECTORY, writer);
     }
 
+    /**
+     * The main function of the file.
+     *
+     * @param args - Command inline arguments.
+     */
     public static void main(String[] args) throws IOException {
         System.out.println("******** Welcome to our Watson Engine! ********");
         WatsonEngine queryEngine = new WatsonEngine();
@@ -56,6 +68,12 @@ public class WatsonEngine {
         queryEngine.computeMRR(queries);
     }
 
+    /**
+     * Quarries a query against the index.
+     *
+     * @param query - A string representing the query.
+     * @return - The list of answers to the query.
+     */
     private List<String> queryIt(String query) throws ParseException, IOException {
         List<String> ans = new ArrayList<>();
 
@@ -75,6 +93,12 @@ public class WatsonEngine {
         return ans;
     }
 
+    /**
+     * Will load the wiki pages into the index.
+     *
+     * @param directory - The directory containing the documents that contain the wiki pages.
+     * @param writer - The index writer.
+     */
     private static void loadData(String directory, IndexWriter writer) throws IOException {
         Set<String> files = Stream.of(Objects.requireNonNull(new File(directory)
                         .listFiles()))
@@ -82,19 +106,11 @@ public class WatsonEngine {
                 .map(File::getName)
                 .collect(Collectors.toSet());
 
-        System.out.println("... Loading files for indexing");
+        System.out.println("... Loading files for indexing from " + directory);
 
         String title = "";
         String content = "";
         int total_docs = 0;
-
-        /* ----- TEST CODE -----*/
-
-        files.remove("tester.txt");
-        //files.clear();
-        //files.add("tester.txt");
-
-        /* ---------------------*/
 
         for (String file : files) {
             Scanner scanner = new Scanner(new File(directory + file));
@@ -108,6 +124,8 @@ public class WatsonEngine {
                     if (!title.isEmpty()) {
                         addDoc(writer, title, content);
                         content = "";
+
+                        total_docs++;
                     }
 
                     // Found page title
@@ -126,40 +144,44 @@ public class WatsonEngine {
 
         writer.commit();
 
-        System.out.println("Total Documents Loaded: " + total_docs);
+        System.out.println("Total Wiki Pages Loaded: " + total_docs);
     }
 
-    private static void addDoc(IndexWriter writer, String docName, String text) throws IOException {
-        text = docName + " " + text;
+    /**
+     * Will add a document to the index.
+     *
+     * @param writer - The index writer.
+     * @param title - The title of the wiki page.
+     * @param text - The text of the wiki page.
+     */
+    private static void addDoc(IndexWriter writer, String title, String text) throws IOException {
+        // Add the title as part of the text
+        text = title + " " + text;
 
-        boolean removeTplSections = false;
-        boolean removeOnlyTplTags = true;
-
+        // Do some general cleaning of the text
         text = text.toLowerCase()
                 .replaceAll("!", "")
                 .replaceAll("==", " ")
-                .replaceAll("--", " ");
-
-        if (removeTplSections) {
-            text = text.replaceAll("(\\[tpl])([\\s\\S]*)(\\[/tpl])", "");
-        }
-
-        if (removeOnlyTplTags) {
-            text = text.replaceAll("(\\[tpl])|(\\[/tpl])", "");
-        }
-
-        String finalText = text.replaceAll("\\s+", " ");
+                .replaceAll("--", " ")
+                .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+                .replaceAll("\\s+", " ");
 
         Document doc = new Document();
-        doc.add(new StringField("title", docName, Field.Store.YES));
+        doc.add(new StringField("title", title, Field.Store.YES));
         doc.add(new TextField("content", text, Field.Store.YES));
 
         writer.addDocument(doc);
     }
 
+    /**
+     * Collects the queries to be run.
+     *
+     * @param file - The path of the file containing the questions.
+     * @return - A map of questions to answers.
+     */
     private static HashMap<String, String> getQueryQuestions(String file) throws IOException {
 
-        System.out.println("... Loading questions file: " + file);
+        System.out.println("... Loading questions file: " + file + "\n");
         HashMap<String, String> query_to_answer = new HashMap<>();
 
         Scanner scanner = new Scanner(new File(file));
@@ -176,6 +198,11 @@ public class WatsonEngine {
         return query_to_answer;
     }
 
+    /**
+     * Will query all questions and compute performance metrics.
+     *
+     * @param queryAnswers - A map of questions to answers.
+     */
     private void computeMRR(HashMap<String, String> queryAnswers) {
         double mrr = 0;
         int answerPresent = 0;
@@ -215,9 +242,17 @@ public class WatsonEngine {
     }
 }
 
+/**
+ * Custom analyzer class.
+ */
 class MyAnalyzer {
 
-    public Analyzer get(int configuration) throws IOException {
+    /**
+     * Gets the custom analyzer.
+     *
+     * @return - The custom analyzer.
+     */
+    public Analyzer get() throws IOException {
 
         Map<String, String> snowballParams = new HashMap<>();
         snowballParams.put("language", "English");
@@ -225,8 +260,6 @@ class MyAnalyzer {
         Map<String, String> stopMap = new HashMap<>();
         stopMap.put("words", "stopwords.txt");
         stopMap.put("format", "wordset");
-
-        // add if statements to return different configurations
 
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
