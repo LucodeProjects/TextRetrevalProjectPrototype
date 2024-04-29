@@ -49,9 +49,7 @@ public class WatsonEngine {
         loadData(WIKI_FILES_DIRECTORY, writer);
     }
 
-    public static void main(String[] args) throws IOException, ParseException {
-        //System.out.println(availableTokenFilters() + "\n\n\n");
-
+    public static void main(String[] args) throws IOException {
         System.out.println("******** Welcome to our Watson Engine! ********");
         WatsonEngine queryEngine = new WatsonEngine();
         HashMap<String, String> queries = getQueryQuestions(QUESTIONS_FILE);
@@ -134,11 +132,24 @@ public class WatsonEngine {
 
     private static void addDoc(IndexWriter writer, String docName, String text) throws IOException {
         text = docName + " " + text;
+
+        boolean removeTplSections = false;
+        boolean removeOnlyTplTags = true;
+
         text = text.toLowerCase()
                 .replaceAll("!", "")
                 .replaceAll("==", " ")
-                .replaceAll("--", " ")
-                .replaceAll("\\s+", " ");
+                .replaceAll("--", " ");
+
+        if (removeTplSections) {
+            text = text.replaceAll("(\\[tpl])([\\s\\S]*)(\\[/tpl])", "");
+        }
+
+        if (removeOnlyTplTags) {
+            text = text.replaceAll("(\\[tpl])|(\\[/tpl])", "");
+        }
+
+        String finalText = text.replaceAll("\\s+", " ");
 
         Document doc = new Document();
         doc.add(new StringField("title", docName, Field.Store.YES));
@@ -199,7 +210,7 @@ public class WatsonEngine {
                 mrr += (double) 1 / rank;
                 answerPresent++;
             }
-            System.out.println("\nQuery: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
+            System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
         }
         double meanmrr = mrr / total_queries;
         System.out.println("\nMRR = " + meanmrr);
@@ -222,12 +233,12 @@ class MyAnalyzer {
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
                 .addTokenFilter(ASCIIFoldingFilterFactory.class)
-                .addTokenFilter(StopFilterFactory.class, stopMap)
+                //.addTokenFilter(StopFilterFactory.class, stopMap)
                 .addTokenFilter(EnglishPossessiveFilterFactory.class)
                 .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
-                .addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
+                //.addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
                 .build();
     }
 }
