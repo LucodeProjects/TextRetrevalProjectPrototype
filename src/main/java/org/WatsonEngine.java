@@ -6,8 +6,6 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
 import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
-import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
@@ -236,6 +234,7 @@ public class WatsonEngine {
                 if (answers.get(0).equals(answer)) {
                     correctAt1++;
                 }
+
                 int rank = answers.indexOf(answer) + 1;
 
                 mrr += (double) 1 / rank;
@@ -244,10 +243,11 @@ public class WatsonEngine {
             System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
         }
         double meanmrr = mrr / total_queries;
-        double pAt1 = (double) correctAt1 / total_queries; 
+        double pAt1 = (double) correctAt1 / total_queries;
+
         System.out.println("\nMRR = " + meanmrr);
-        System.out.println("\nAnswer was somewhere in predictions = " + answerPresent + " / " + total_queries);
-        System.out.println("\nP@1 = " + pAt1);
+        System.out.println("P@1 = " + pAt1);
+        System.out.println("Answer was somewhere in predictions = " + answerPresent + " / " + total_queries);
     }
 }
 
@@ -273,9 +273,7 @@ class MyAnalyzer {
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
-                .addTokenFilter(ASCIIFoldingFilterFactory.class)
                 //.addTokenFilter(StopFilterFactory.class, stopMap)
-                .addTokenFilter(EnglishPossessiveFilterFactory.class)
                 .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
