@@ -42,7 +42,7 @@ public class WatsonEngine {
     Directory index;
 
     public WatsonEngine() throws IOException {
-        this.analyzer = new MyAnalyzer().get();
+        this.analyzer = new MyAnalyzer().get(0);
         this.index = new ByteBuffersDirectory();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         IndexWriter writer = new IndexWriter(index, config);
@@ -85,7 +85,6 @@ public class WatsonEngine {
         System.out.println("... Loading files for indexing");
 
         String title = "";
-        String categories = "";
         String content = "";
         int total_docs = 0;
 
@@ -167,14 +166,12 @@ public class WatsonEngine {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (!line.isEmpty()) {
-                String category = line.toLowerCase().trim();
                 String clue = scanner.nextLine().trim();
                 String answer = scanner.nextLine().trim();
 
                 query_to_answer.put(clue, answer);
             }
         }
-
 
         return query_to_answer;
     }
@@ -220,7 +217,7 @@ public class WatsonEngine {
 
 class MyAnalyzer {
 
-    public Analyzer get() throws IOException {
+    public Analyzer get(int configuration) throws IOException {
 
         Map<String, String> snowballParams = new HashMap<>();
         snowballParams.put("language", "English");
@@ -228,6 +225,8 @@ class MyAnalyzer {
         Map<String, String> stopMap = new HashMap<>();
         stopMap.put("words", "stopwords.txt");
         stopMap.put("format", "wordset");
+
+        // add if statements to return different configurations
 
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
