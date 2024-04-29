@@ -135,6 +135,7 @@ public class WatsonEngine {
     private static void addDoc(IndexWriter writer, String docName, String text) throws IOException {
         text = docName + " " + text;
         text = text.toLowerCase()
+                .replaceAll("!", "")
                 .replaceAll("==", " ")
                 .replaceAll("--", " ")
                 .replaceAll("\\s+", " ");
@@ -167,7 +168,7 @@ public class WatsonEngine {
         return query_to_answer;
     }
 
-    private void computeMRR(HashMap<String, String> queryAnswers) throws ParseException, IOException {
+    private void computeMRR(HashMap<String, String> queryAnswers) {
         double mrr = 0;
         int answerPresent = 0;
         int total_queries = queryAnswers.size();
@@ -175,10 +176,13 @@ public class WatsonEngine {
         for (HashMap.Entry<String, String> entry : queryAnswers.entrySet()) {
             String query = entry.getKey();
             String answer = entry.getValue();
-            List<String> answers = new ArrayList<String>();
+            List<String> answers = new ArrayList<>();
 
             try {
-                String cleanQuery = query.toLowerCase().replaceAll("--", " ").replaceAll("\\s+", " ").trim();
+                String cleanQuery = query.toLowerCase()
+                        .replaceAll("!", "")
+                        .replaceAll("--", " ")
+                        .replaceAll("\\s+", " ").trim();
                 answers = queryIt(cleanQuery);
             }
             catch(Exception e) {
