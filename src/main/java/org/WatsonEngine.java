@@ -6,8 +6,6 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
 import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
-import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
@@ -264,9 +262,7 @@ class MyAnalyzer {
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
-                .addTokenFilter(ASCIIFoldingFilterFactory.class)
                 //.addTokenFilter(StopFilterFactory.class, stopMap)
-                .addTokenFilter(EnglishPossessiveFilterFactory.class)
                 .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
