@@ -188,7 +188,7 @@ public class WatsonEngine {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (!line.isEmpty()) {
-                String clue = scanner.nextLine().trim();
+                String clue = line.trim() + " " + scanner.nextLine().trim();
                 String answer = scanner.nextLine().trim();
 
                 query_to_answer.put(clue, answer);
