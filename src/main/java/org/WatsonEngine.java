@@ -39,8 +39,11 @@ import org.apache.lucene.store.ByteBuffersDirectory;
  * @author Aryam Gomez, Amimul Ehsan Zoha, and Muaz Ali
  */
 public class WatsonEngine {
-    static String WIKI_FILES_DIRECTORY = "src\\main\\resources\\wiki-subset-20140602\\";
-    static String QUESTIONS_FILE = "src\\main\\resources\\questions.txt";
+   
+    static String WIKI_FILES_DIRECTORY = "src" + File.separator + "main" + File.separator + 
+    "resources" + File.separator + "wiki-subset-20140602" + File.separator;
+    static String QUESTIONS_FILE = "src" + File.separator + "main" + File.separator + 
+    "resources" + File.separator + "questions.txt";
 
     Analyzer analyzer;
     Directory index;
