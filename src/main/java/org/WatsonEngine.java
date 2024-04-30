@@ -13,7 +13,7 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
-import java.io.File;
+import java.io.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.lucene.index.DirectoryReader;
@@ -40,6 +40,10 @@ public class WatsonEngine {
     "resources" + File.separator + "wiki-subset-20140602" + File.separator;
     static String QUESTIONS_FILE = "src" + File.separator + "main" + File.separator + 
     "resources" + File.separator + "questions.txt";
+
+    static String QUERIES_OUTPUT_FILE = "src" + File.separator + "main" + File.separator +
+            "resources" + File.separator + "queriesProcessed.txt";
+
 
     Analyzer analyzer;
     Directory index;
@@ -215,12 +219,13 @@ public class WatsonEngine {
         int answerPresent = 0;
         int correctAt1 = 0;
         int total_queries = queryAnswers.size();
+        StringBuilder queries_output= new StringBuilder();
 
         for (HashMap.Entry<String, String> entry : queryAnswers.entrySet()) {
             String query = entry.getKey();
             String answer = entry.getValue();
             List<String> answers = new ArrayList<>();
-
+            queries_output.append("|\n");
             try {
                 answers = queryIt(query);
             }
@@ -230,6 +235,16 @@ public class WatsonEngine {
                         e.getMessage() +
                         "\n---------------------------------------------\n");
             }
+            queries_output.append("[content]\n");
+
+            queries_output.append(query);
+            queries_output.append("[content]\n");
+
+            queries_output.append(answer);
+            queries_output.append("[content]\n");
+            queries_output.append(answers.toString());
+            queries_output.append("|\n");
+
             if (answers.isEmpty()) {
                 continue;
             } else if (answers.contains(answer)) {
@@ -255,6 +270,16 @@ public class WatsonEngine {
         System.out.println("\nMRR = " + meanmrr);
         System.out.println("P@1 = " + pAt1);
         System.out.println("Answer was somewhere in predictions = " + answerPresent + " / " + total_queries);
+        try {
+            FileWriter writer = new FileWriter(QUERIES_OUTPUT_FILE);
+            writer.write(queries_output.toString());
+            writer.close();
+            System.out.println("Queries and their output has been written to: " + QUERIES_OUTPUT_FILE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
 
