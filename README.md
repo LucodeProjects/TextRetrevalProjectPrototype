@@ -5,4 +5,4 @@
 
 To run our project for the undergraduate version please click: ``WatsonEngine``
 
-To run our project for the graduate version please click: ``ImprovedWatsonEngine``
+To access the LLM based re-evaluation of the Engine's responses (graduate version) please open the following notebook: ``LLMEvaluation.ipynb``
