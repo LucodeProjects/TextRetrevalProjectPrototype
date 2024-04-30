@@ -74,6 +74,14 @@ public class WatsonEngine {
      * @return - The list of answers to the query.
      */
     private List<String> queryIt(String query) throws ParseException, IOException {
+        // Apply the same cleaning done to the text on the index side
+        query = query.toLowerCase()
+            .replaceAll("!", "")
+            .replaceAll("==", " ")
+            .replaceAll("--", " ")
+            .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+            .replaceAll("\\s+", " ");
+
         List<String> ans = new ArrayList<>();
 
         Query q = new QueryParser("content", analyzer).parse(query);
@@ -214,14 +222,7 @@ public class WatsonEngine {
             List<String> answers = new ArrayList<>();
 
             try {
-                // Apply the same cleaning done to the text on the index side
-                String cleanQuery = query.toLowerCase()
-                        .replaceAll("!", "")
-                        .replaceAll("==", " ")
-                        .replaceAll("--", " ")
-                        .replaceAll("(\\[tpl])|(\\[/tpl])", "")
-                        .replaceAll("\\s+", " ");
-                answers = queryIt(cleanQuery);
+                answers = queryIt(query);
             }
             catch(Exception e) {
                 System.out.println("\n--------- Error Unable to Process ---------\n" +
