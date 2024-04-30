@@ -2,6 +2,8 @@ package org;
 
 import java.io.IOException;
 import java.util.*;
+import org.apache.lucene.store.FSDirectory;
+import java.nio.file.Paths;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
@@ -40,9 +42,8 @@ public class WatsonEngine {
     "resources" + File.separator + "wiki-subset-20140602" + File.separator;
     static String QUESTIONS_FILE = "src" + File.separator + "main" + File.separator + 
     "resources" + File.separator + "questions.txt";
-
-    static String QUERIES_OUTPUT_FILE = "src" + File.separator + "main" + File.separator +
-            "resources" + File.separator + "queriesProcessed.txt";
+    static String INDEX_DIRECTORY = "src" + File.separator + "main" + File.separator +
+    "resources" + File.separator + "lucene_index" + File.separator;
 
 
     Analyzer analyzer;
@@ -53,7 +54,12 @@ public class WatsonEngine {
      */
     public WatsonEngine() throws IOException {
         this.analyzer = new MyAnalyzer().get();
-        this.index = new ByteBuffersDirectory();
+        File indexDir = new File(INDEX_DIRECTORY);
+        if (!indexDir.exists()) {
+            indexDir.mkdirs(); // Make the directory if it doesn't exist
+        }
+        this.index = FSDirectory.open(Paths.get(INDEX_DIRECTORY));
+        //this.index = new ByteBuffersDirectory();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         IndexWriter writer = new IndexWriter(index, config);
         loadData(WIKI_FILES_DIRECTORY, writer);
@@ -83,7 +89,7 @@ public class WatsonEngine {
             .replaceAll("!", "")
             .replaceAll("==", " ")
             .replaceAll("--", " ")
-            .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+            //.replaceAll("(\\[tpl])|(\\[/tpl])", "")
             .replaceAll("\\s+", " ");
 
         List<String> ans = new ArrayList<>();
@@ -174,7 +180,7 @@ public class WatsonEngine {
                 .replaceAll("!", "")
                 .replaceAll("==", " ")
                 .replaceAll("--", " ")
-                .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+                //.replaceAll("(\\[tpl])|(\\[/tpl])", "")
                 .replaceAll("\\s+", " ");
 
         Document doc = new Document();
@@ -219,13 +225,12 @@ public class WatsonEngine {
         int answerPresent = 0;
         int correctAt1 = 0;
         int total_queries = queryAnswers.size();
-        StringBuilder queries_output= new StringBuilder();
 
         for (HashMap.Entry<String, String> entry : queryAnswers.entrySet()) {
             String query = entry.getKey();
             String answer = entry.getValue();
             List<String> answers = new ArrayList<>();
-            queries_output.append("|\n");
+
             try {
                 answers = queryIt(query);
             }
@@ -235,16 +240,6 @@ public class WatsonEngine {
                         e.getMessage() +
                         "\n---------------------------------------------\n");
             }
-            queries_output.append("[content]\n");
-
-            queries_output.append(query);
-            queries_output.append("[content]\n");
-
-            queries_output.append(answer);
-            queries_output.append("[content]\n");
-            queries_output.append(answers.toString());
-            queries_output.append("|\n");
-
             if (answers.isEmpty()) {
                 continue;
             } else if (answers.contains(answer)) {
@@ -270,16 +265,6 @@ public class WatsonEngine {
         System.out.println("\nMRR = " + meanmrr);
         System.out.println("P@1 = " + pAt1);
         System.out.println("Answer was somewhere in predictions = " + answerPresent + " / " + total_queries);
-        try {
-            FileWriter writer = new FileWriter(QUERIES_OUTPUT_FILE);
-            writer.write(queries_output.toString());
-            writer.close();
-            System.out.println("Queries and their output has been written to: " + QUERIES_OUTPUT_FILE);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
     }
 }
 
