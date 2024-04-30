@@ -4,11 +4,9 @@ import java.io.IOException;
 import java.util.*;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
-import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
 import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
 import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
 import org.apache.lucene.document.Document;
@@ -66,7 +64,7 @@ public class WatsonEngine {
         System.out.println("******** Welcome to our Watson Engine! ********");
         WatsonEngine queryEngine = new WatsonEngine();
         HashMap<String, String> queries = getQueryQuestions(QUESTIONS_FILE);
-        queryEngine.computeMRR(queries);
+        queryEngine.queryAndComputeStats(queries);
     }
 
     /**
@@ -204,7 +202,7 @@ public class WatsonEngine {
      *
      * @param queryAnswers - A map of questions to answers.
      */
-    private void computeMRR(HashMap<String, String> queryAnswers) {
+    private void queryAndComputeStats(HashMap<String, String> queryAnswers) {
         double mrr = 0;
         int answerPresent = 0;
         int correctAt1 = 0;
