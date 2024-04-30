@@ -1,22 +1,21 @@
 package org;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Paths;
 import java.util.*;
-
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
+import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
+import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
+import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
+import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
-
 import java.io.File;
-
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
@@ -29,188 +28,246 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.ByteBuffersDirectory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
-import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
-import org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory;
-import org.apache.lucene.analysis.core.StopFilterFactory;
-import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
-import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
 
-
+/**
+ * The Watson Engine.
+ *
+ * @author Aryam Gomez, Amimul Ehsan Zoha, and Muaz Ali
+ */
 public class WatsonEngine {
-    boolean indexExists = false;
-    String inputFilePath = "";
-    Analyzer sa = null;
-    Directory index_g = null;
+   
+    static String WIKI_FILES_DIRECTORY = "src" + File.separator + "main" + File.separator + 
+    "resources" + File.separator + "wiki-subset-20140602" + File.separator;
+    static String QUESTIONS_FILE = "src" + File.separator + "main" + File.separator + 
+    "resources" + File.separator + "questions.txt";
 
-    public WatsonEngine(String inputFile) throws IOException {
-        inputFilePath = inputFile;
-        buildIndex();
-    }
+    Analyzer analyzer;
+    Directory index;
 
-    private void buildIndex() throws IOException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        StandardAnalyzer analyzer = new StandardAnalyzer();
-        Directory index = new ByteBuffersDirectory();
+    /**
+     * Builds the Watson Engine.
+     */
+    public WatsonEngine() throws IOException {
+        this.analyzer = new MyAnalyzer().get();
+        this.index = new ByteBuffersDirectory();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        sa = analyzer;
-        index_g = index;
-        try {
-            IndexWriter writer = new IndexWriter(index, config);
-            loadData(inputFilePath, writer);
-
-
-        } catch (Exception ignore) {
-
-        }
-
-        indexExists = true;
+        IndexWriter writer = new IndexWriter(index, config);
+        loadData(WIKI_FILES_DIRECTORY, writer);
     }
 
-    public List<String> queryIt(String query) throws java.io.IOException {
-        if (!indexExists) {
-            buildIndex();
-        }
-
-
-        try {
-
-
-            Query q = new QueryParser("content", sa).parse(query);
-            int hitsPerPage = 10;
-            IndexReader reader = DirectoryReader.open(index_g);
-            IndexSearcher searcher = new IndexSearcher(reader);
-            TopDocs docs = searcher.search(q, hitsPerPage);
-            ScoreDoc[] hits = docs.scoreDocs;
-
-            List<String> ans = new ArrayList<>();
-
-            for (int i = 0; i < hits.length; ++i) {
-                int docId = hits[i].doc;
-                Document d = searcher.doc(docId);
-                ans.add(d.get("docid"));
-//                System.out.println("Doc: " + d.get("docid") + ", Score: " + hits[i].score);
-            }
-            return ans;
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-
+    /**
+     * The main function of the file.
+     *
+     * @param args - Command inline arguments.
+     */
+    public static void main(String[] args) throws IOException {
+        System.out.println("******** Welcome to our Watson Engine! ********");
+        WatsonEngine queryEngine = new WatsonEngine();
+        HashMap<String, String> queries = getQueryQuestions(QUESTIONS_FILE);
+        queryEngine.queryAndComputeStats(queries);
     }
 
-    public static void main(String[] args) {
-        try {
-            String wiki_dir_name = "src/main/resources/wiki-subset-20140602";
-            String question_file = "src/main/resources/questions.txt";
-            System.out.println("******** Welcome to  Our Engine! ********");
-            WatsonEngine objQueryEngine = new WatsonEngine(wiki_dir_name);
-            HashMap queries= objQueryEngine.getQueryQuestions(question_file);
-            objQueryEngine.computeMRR(queries);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+    /**
+     * Quarries a query against the index.
+     *
+     * @param query - A string representing the query.
+     * @return - The list of answers to the query.
+     */
+    private List<String> queryIt(String query) throws ParseException, IOException {
+        // Apply the same cleaning done to the text on the index side
+        query = query.toLowerCase()
+            .replaceAll("!", "")
+            .replaceAll("==", " ")
+            .replaceAll("--", " ")
+            .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+            .replaceAll("\\s+", " ");
+
+        List<String> ans = new ArrayList<>();
+
+        Query q = new QueryParser("content", analyzer).parse(query);
+        int hitsPerPage = 10;
+        IndexReader reader = DirectoryReader.open(index);
+        IndexSearcher searcher = new IndexSearcher(reader);
+        TopDocs docs = searcher.search(q, hitsPerPage);
+        ScoreDoc[] hits = docs.scoreDocs;
+
+        for (ScoreDoc hit : hits) {
+            int title = hit.doc;
+            Document d = searcher.doc(title);
+            ans.add(d.get("title"));
         }
+
+        return ans;
     }
 
-    private static void addDoc(IndexWriter writer, String docName, String text) throws IOException {
-        Document doc = new Document();
-        doc.add(new StringField("docid", docName, Field.Store.YES));
-        doc.add(new TextField("content", text, Field.Store.YES));
-        writer.addDocument(doc);
-
-    }
-
+    /**
+     * Will load the wiki pages into the index.
+     *
+     * @param directory - The directory containing the documents that contain the wiki pages.
+     * @param writer - The index writer.
+     */
     private static void loadData(String directory, IndexWriter writer) throws IOException {
-        File directory_structure = new File(directory);
-        File[] files = directory_structure.listFiles();
+        Set<String> files = Stream.of(Objects.requireNonNull(new File(directory)
+                        .listFiles()))
+                .filter(file -> !file.isDirectory())
+                .map(File::getName)
+                .collect(Collectors.toSet());
+
+        System.out.println("... Loading files for indexing from " + directory);
+
+        String title = "";
+        String content = "";
         int total_docs = 0;
 
-        for (File file : files) {
-            System.out.println("... Loading file: " + file);
-            byte[] bytes = Files.readAllBytes(file.toPath());
-            String content = new String(bytes);
+        for (String file : files) {
+            Scanner scanner = new Scanner(new File(directory + file));
 
-            String[] parts = content.split(
-                    "\n" +
-                            "\n" +
-                            "\\[\\[");
+            // Process this file
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
 
-            for (int i = 1; i < parts.length; i++) {
-                String[] subParts = parts[i].split("]]", 2);
-                if (subParts.length > 1) {
-                    String docName = subParts[0].trim();
-                    String docText = docName + subParts[1].trim();
-                    addDoc(writer, docName, docText);
-                    total_docs += 1;
+                if (line.startsWith("[[")) {
+                    // If we have already read a title, then we are finished with the last one.
+                    if (!title.isEmpty()) {
+                        addDoc(writer, title, content);
+                        content = "";
+
+                        total_docs++;
+                    }
+
+                    // Found page title
+                    title = line.trim();
+                    title = title.substring(2, title.length() - 2);
+                } else {
+                    // Found page text
+                    content += " " + line;
                 }
             }
 
+            // Add last page
+            addDoc(writer, title, content);
+            total_docs++;
         }
+
         writer.commit();
 
-        System.out.println("Total Documents Loaded: " + total_docs);
-
+        System.out.println("Total Wiki Pages Loaded: " + total_docs);
     }
 
-    private static HashMap<String, String> getQueryQuestions(String file_path) throws IOException {
+    /**
+     * Will add a document to the index.
+     *
+     * @param writer - The index writer.
+     * @param title - The title of the wiki page.
+     * @param text - The text of the wiki page.
+     */
+    private static void addDoc(IndexWriter writer, String title, String text) throws IOException {
+        // Add the title as part of the text
+        text = title + " " + text;
 
-        System.out.println("... Loading questions file: " + file_path);
-        byte[] bytes = Files.readAllBytes(Paths.get(file_path));
-        String content = new String(bytes);
+        // Do some general cleaning of the text
+        text = text.toLowerCase()
+                .replaceAll("!", "")
+                .replaceAll("==", " ")
+                .replaceAll("--", " ")
+                .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+                .replaceAll("\\s+", " ");
 
+        Document doc = new Document();
+        doc.add(new StringField("title", title, Field.Store.YES));
+        doc.add(new TextField("content", text, Field.Store.YES));
+
+        writer.addDocument(doc);
+    }
+
+    /**
+     * Collects the queries to be run.
+     *
+     * @param file - The path of the file containing the questions.
+     * @return - A map of questions to answers.
+     */
+    private static HashMap<String, String> getQueryQuestions(String file) throws IOException {
+
+        System.out.println("... Loading questions file: " + file + "\n");
         HashMap<String, String> query_to_answer = new HashMap<>();
-        String[] parts = content.split("\n" + "\n");
 
-        for (int i = 1; i < parts.length; i++) {
-            String[] subParts = parts[i].split("\n", 3);
-            if (subParts.length > 1) {
-                String category = subParts[0].trim();
+        Scanner scanner = new Scanner(new File(file));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (!line.isEmpty()) {
+                String clue = line.trim() + " " + scanner.nextLine().trim();
+                String answer = scanner.nextLine().trim();
 
-                String clue = subParts[1].trim();
-                String answer = subParts[2].trim();
-
-                String query =  "+" + String.join(" +", clue.split(" ")); // tweak this part
-                query_to_answer.put(query, answer);
+                query_to_answer.put(clue, answer);
             }
         }
 
         return query_to_answer;
     }
 
-    public double computeMRR(HashMap<String, String> queryAnswers) {
+    /**
+     * Will query all questions and compute performance metrics.
+     *
+     * @param queryAnswers - A map of questions to answers.
+     */
+    private void queryAndComputeStats(HashMap<String, String> queryAnswers) {
         double mrr = 0;
         int answerPresent = 0;
+        int correctAt1 = 0;
         int total_queries = queryAnswers.size();
 
         for (HashMap.Entry<String, String> entry : queryAnswers.entrySet()) {
             String query = entry.getKey();
             String answer = entry.getValue();
+            List<String> answers = new ArrayList<>();
+
             try {
-                List<String> answers = queryIt(query);
-                if (answers.size() == 0) {
-                    continue;
-                } else if (answers.contains(answer)) {
-                    int rank = answers.indexOf(answer) + 1;
-
-                    mrr += 1 / rank;
-                    answerPresent++;
-                }
-                System.out.println("\nQuery: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n\n");
-
-            } catch (Exception ignored) {
+                answers = queryIt(query);
             }
-        }
-        double meanmrr = mrr / total_queries;
-        System.out.println("\nMRR = " + meanmrr);
-        System.out.println("\nAnswer was somewhere in predictions = " + answerPresent + " / " + total_queries);
+            catch(Exception e) {
+                System.out.println("\n--------- Error Unable to Process ---------\n" +
+                        query + "\n" +
+                        e.getMessage() +
+                        "\n---------------------------------------------\n");
+            }
+            if (answers.isEmpty()) {
+                continue;
+            } else if (answers.contains(answer)) {
+                // Check if top answer is correct for P@1 stat
+                if (answers.get(0).equals(answer)) {
+                    correctAt1++;
+                }
 
-        return meanmrr;
+                // Carry out calculations for MRR stat
+                int rank = answers.indexOf(answer) + 1;
+                mrr += (double) 1 / rank;
+
+                answerPresent++;
+            }
+            System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
+        }
+        // Calculate MRR stat
+        double meanmrr = mrr / total_queries;
+
+        //Calculate P@1 stat
+        double pAt1 = (double) correctAt1 / total_queries;
+
+        System.out.println("\nMRR = " + meanmrr);
+        System.out.println("P@1 = " + pAt1);
+        System.out.println("Answer was somewhere in predictions = " + answerPresent + " / " + total_queries);
     }
 }
 
+/**
+ * Custom analyzer class.
+ */
 class MyAnalyzer {
 
+    /**
+     * Gets the custom analyzer.
+     *
+     * @return - The custom analyzer.
+     */
     public Analyzer get() throws IOException {
 
         Map<String, String> snowballParams = new HashMap<>();
@@ -223,15 +280,11 @@ class MyAnalyzer {
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
-                .addTokenFilter(StopFilterFactory.class, stopMap)
-                .addTokenFilter(ASCIIFoldingFilterFactory.class)
-                .addTokenFilter(EnglishPossessiveFilterFactory.class)
+                //.addTokenFilter(StopFilterFactory.class, stopMap)
+                .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
-
-                // here is the Porter stemmer step:
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
-
-                .addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
+                //.addTokenFilter(RemoveDuplicatesTokenFilterFactory.class)
                 .build();
     }
 }
