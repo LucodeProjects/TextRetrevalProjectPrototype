@@ -216,10 +216,13 @@ public class WatsonEngine {
             List<String> answers = new ArrayList<>();
 
             try {
+                // Apply the same cleaning done to the text on the index side
                 String cleanQuery = query.toLowerCase()
                         .replaceAll("!", "")
+                        .replaceAll("==", " ")
                         .replaceAll("--", " ")
-                        .replaceAll("\\s+", " ").trim();
+                        .replaceAll("(\\[tpl])|(\\[/tpl])", "")
+                        .replaceAll("\\s+", " ");
                 answers = queryIt(cleanQuery);
             }
             catch(Exception e) {
@@ -231,18 +234,23 @@ public class WatsonEngine {
             if (answers.isEmpty()) {
                 continue;
             } else if (answers.contains(answer)) {
+                // Check if top answer is correct for P@1 stat
                 if (answers.get(0).equals(answer)) {
                     correctAt1++;
                 }
 
+                // Carry out calculations for MRR stat
                 int rank = answers.indexOf(answer) + 1;
-
                 mrr += (double) 1 / rank;
+
                 answerPresent++;
             }
             System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
         }
+        // Calculate MRR stat
         double meanmrr = mrr / total_queries;
+
+        //Calculate P@1 stat
         double pAt1 = (double) correctAt1 / total_queries;
 
         System.out.println("\nMRR = " + meanmrr);
