@@ -3,12 +3,18 @@
 
 # Commands to Run the Project
 
+
+To run our project for the undergraduate version please click: ``WatsonEngine``
+
+To run our project for the graduate version please click: ``ImprovedWatsonEngine``
+
+To access the LLM based re-evaluation of the Engine's responses (graduate version) please open the following notebook: ``LLMEvaluation.ipynb``
+
 Watson Engine:
 The simplest is to load the project in IntelliJ IDEA and run the WatsonEngine.java file.
 
 Alternatively:
 java -classpath {all the libraries needed} org.WatsonEngine, or you can also access the README.md file and use the Run option from there.
-
 
 
 LLM Evaluation:
