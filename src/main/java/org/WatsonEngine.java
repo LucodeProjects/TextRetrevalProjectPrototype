@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.*;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
+import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory;
 import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
@@ -259,7 +260,7 @@ public class WatsonEngine {
 
                 answerPresent++;
             }
-            System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
+            //System.out.println("Query: " + query + "\nAnswer: " + answer + "\nPredictions: " + answers + "\n");
         }
         // Calculate MRR stat
         double meanmrr = mrr / total_queries;
@@ -305,7 +306,7 @@ class MyAnalyzer {
         return CustomAnalyzer.builder()
                 .withTokenizer(StandardTokenizerFactory.class)
                 .addTokenFilter(LowerCaseFilterFactory.class)
-                //.addTokenFilter(StopFilterFactory.class, stopMap)
+                .addTokenFilter(StopFilterFactory.class, stopMap)
                 .addTokenFilter(HyphenatedWordsFilterFactory.class)
                 .addTokenFilter(KeywordRepeatFilterFactory.class)
                 .addTokenFilter(SnowballPorterFilterFactory.class, snowballParams)
