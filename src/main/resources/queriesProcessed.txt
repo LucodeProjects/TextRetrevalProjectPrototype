@@ -2,12 +2,12 @@
 [content]
 CAPITAL CITY CHURCHES (Alex: We'll give you the church. You tell us the capital city in which it is located.) The High Kirk of St. Giles, where John Knox was minister[content]
 Edinburgh[content]
-[Church of Scotland, John Knox, John the Baptist, Edinburgh, Perth, Scotland, Mary of Bethany, Alexander Kolchak, Annapolis, Maryland, Genius loci, Edessa]|
+[Church of Scotland, John Knox, John the Baptist, Perth, Scotland, Mary of Bethany, Edinburgh, Alexander Kolchak, Genius loci, St Paul's Cathedral, Annapolis, Maryland]|
 |
 [content]
 NEWSPAPERS This Georgia paper is known as the AJC for short[content]
 The Atlanta Journal-Constitution[content]
-[The Atlanta Journal-Constitution, Interstate 285, Georgia (U.S. state), Thoroughbred racing in Australia, Cherokee language, The Tabernacle, The Five Orange Pips, IBM Series/1, Red Skelton, William C. Roberts]|
+[The Atlanta Journal-Constitution, Interstate 285, Stylish Century, Georgia (U.S. state), Thoroughbred racing in Australia, Cherokee language, The Tabernacle, The Five Orange Pips, IBM Series/1, Red Skelton]|
 |
 [content]
 NAME THE PARENT COMPANY Milton Bradley games[content]
@@ -17,472 +17,472 @@ Hasbro[content]
 [content]
 CAPITAL CITY CHURCHES (Alex: We'll give you the church. You tell us the capital city in which it is located.) In this Finnish city, the Lutheran Cathedral, also known as Tuomiokirkko[content]
 Helsinki[content]
-[Savonlinna, Tampere, Trondheim, Espoo, Edessa, Turku, Omsk, Pope, Magdeburg, New Year's Eve]|
+[Savonlinna, Espoo, Tampere, Trondheim, Omsk, Edessa, Roseau, John the Baptist, Turku, Magdeburg]|
 |
 [content]
 1920s NEWS FLASH! 1922: It's the end of an empire! This empire, in fact! After 600 years, it's goodbye, this, hello, Turkish Republic![content]
 Ottoman Empire[content]
-[Lycia, History of Armenia, File:Balkan-nations.jpg|thumb|right|250px|The nationalities of Southeastern Europe in the late 19th century represented in Pallas Nagy Lexikona, 189, British Army, File:Europe subregion map UN geoschme.svg|thumb|350px|Regions used for statistical processing purposes by the United Nations Statistics Division (Eastern Europe marked red), Aftermath of World War I, Kurdish people, Trabzon, Cyprus, Cologne]|
+[Lycia, File:Balkan-nations.jpg|thumb|right|250px|The nationalities of Southeastern Europe in the late 19th century represented in Pallas Nagy Lexikona, 189, History of Armenia, Aftermath of World War I, Trabzon, File:Europe subregion map UN geoschme.svg|thumb|350px|Regions used for statistical processing purposes by the United Nations Statistics Division (Eastern Europe marked red), Kurdish people, Russo-Turkish War (1877–78), Mongols, Cologne]|
 |
 [content]
 STATE OF THE ART MUSEUM (Alex: We'll give you the museum. You give us the state.) The Taft Museum of Art[content]
 Ohio[content]
-[Museum of Science and Industry (Chicago), Bhavacakra, Sculpture of the United States, Red Jacket, Michael Bierut, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Tracey Emin, Newseum, Terre Haute, Indiana, Narasimha]|
+[Museum of Science and Industry (Chicago), Bhavacakra, Sculpture of the United States, Red Jacket, Michael Bierut, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Narasimha, Tracey Emin, Terre Haute, Indiana, Devon Dikeou]|
 |
 [content]
 HISTORICAL QUOTES In 1888 this Chancellor told the Reichstag, "we Germans fear God, but nothing else in the world"[content]
 Otto von Bismarck|Von Bismarck[content]
-[Wilhelm II, German Emperor, Otto von Bismarck, Imperial German Navy, Heinrich Brüning, Enabling Act of 1933, Joseph Chamberlain, Hermann Göring, Theobald von Bethmann-Hollweg, Lists of office-holders, Tear down this wall!]|
+[Wilhelm II, German Emperor, Otto von Bismarck, Imperial German Navy, Joseph Chamberlain, Heinrich Brüning, Lists of office-holders, Enabling Act of 1933, Hermann Göring, Theobald von Bethmann-Hollweg, Communist Party of Germany]|
 |
 [content]
 HISTORICAL QUOTES In a 1959 American kitchen exhibit in Moscow, he told Khrushchev, "In America, we like to make life easier for women"[content]
 Richard Nixon|Nixon[content]
-[American National Exhibition, William Safire, Cuban missile crisis, Yuri Zhukov (journalist), Harlem Globetrotters, History of the People's Republic of China (1949–76), Leonid Brezhnev, Yuri Gagarin, Morris Childs, Georgy Zhukov]|
+[American National Exhibition, William Safire, Cuban missile crisis, Yuri Zhukov (journalist), History of the People's Republic of China (1949–76), Harlem Globetrotters, Leonid Brezhnev, Yuri Gagarin, Georgy Zhukov, Morris Childs]|
 |
 [content]
 AFRICAN CITIES The name of this largest Moroccan city combines 2 Spanish words[content]
 Casablanca[content]
-[Casablanca, Oran, Marrakesh, Leo Africanus, Western Sahara, Canary Islands, Agadir, Extremadura, Melilla, History of Western Sahara]|
+[Casablanca, Oran, Marrakesh, Leo Africanus, Canary Islands, Extremadura, Western Sahara, Agadir, Melilla, History of Western Sahara]|
 |
 [content]
 NEWSPAPERS In 1840 Horace Greeley began publishing "The Log Cabin", a weekly campaign paper in support of this Whig candidate[content]
 William Henry Harrison[content]
-[Horace Greeley, William Henry Harrison, Schuyler Colfax, William Lyon Mackenzie, Anti-Masonic Party, W. C. Handy, Outing, Queer Nation, Libertarian perspectives on LGBT rights, The Day (New London)]|
+[Horace Greeley, William Henry Harrison, Austin Blair, Schuyler Colfax, Fred Harman, Anti-Masonic Party, William Lyon Mackenzie, Salem Historic District (New York), Lincoln's New Salem, Celestine Sibley]|
 |
 [content]
 AFRICAN CITIES Several bridges, including El Tahrir, cross the Nile in this capital[content]
 Cairo[content]
-[Cairo, Khartoum, Nile, Prefecture Apostolic of the Delta of the Nile, History of Egypt, Omdurman, 2003 Boumerdès earthquake, Murcia, Kinshasa, Crossing the Red Sea]|
+[Cairo, Khartoum, Nile, Prefecture Apostolic of the Delta of the Nile, Kosti, Sudan, Omdurman, 2003 Boumerdès earthquake, Murcia, History of Western Sahara, History of Egypt]|
 |
 [content]
 OLD YEAR'S RESOLUTIONS U.N. Res. 242 supports "secure and recognized boundaries" for Israel & neighbors following this June 1967 war[content]
 The Six Day War[content]
-[Golan Heights, Camp David Accords, United Nations Partition Plan for Palestine, United Nations Commission on Human Rights, Israeli–Palestinian conflict, Israel and legitimacy, West Bank, Politics of the Palestinian National Authority, Jenin, 1949 Armistice Agreements]|
+[Golan Heights, Camp David Accords, United Nations Partition Plan for Palestine, United Nations Commission on Human Rights, Israeli–Palestinian conflict, Politics of the Palestinian National Authority, Israel and legitimacy, West Bank, Jenin, 1949 Armistice Agreements]|
 |
 [content]
 THAT 20-AUGHTS SHOW A 2-part episode of "JAG" introduced this Mark Harmon drama[content]
 NCIS[content]
-[List of NCIS characters, Law & Order, The West Wing, Cold Feet, The Adventures of Ozzie and Harriet, The Sarah Jane Adventures, Fair City, Gunsmoke, Doctors (soap opera), Big Finish Productions]|
+[List of NCIS characters, Law & Order, James Harmon Brown and Barbara Esensten, Peter Stormare, The West Wing, Cold Feet, The Adventures of Ozzie and Harriet, Doctors (soap opera), Gunsmoke, The Sarah Jane Adventures]|
 |
 [content]
 CEMETERIES The mast from the USS Maine is part of the memorial to the ship & crew at this national cemetery[content]
 Arlington National Cemetery|Arlington Cemetery[content]
-[USS Arizona Memorial, Margate Surfboat, Robert Ballard, Thomas W. Lawson (ship), Burma Railway, Richard Henry Dana, Jr., Tora! Tora! Tora!, George Henry Preble, CSS Virginia, Tomb of the Unknowns]|
+[USS Arizona Memorial, Margate Surfboat, Thomas W. Lawson (ship), Robert Ballard, Frank Newcomb, Richard Henry Dana, Jr., Burma Railway, George Henry Preble, USS Bonhomme Richard (LHD-6), Tora! Tora! Tora!]|
 |
 [content]
 SERVICE ORGANIZATIONS Father Michael McGivney founded this fraternal society for Catholic laymen in 1882[content]
 Knights of Columbus[content]
-[Knights of Columbus, Studentenverbindung, Knights of Labor, St. Vincent de Paul Church (Manhattan), Omega Psi Phi, Felix Frankfurter, Sacred Heart Catholic Church (McCartyville, Ohio), St. Mary's Church (Wappingers Falls, New York), Grand Army of the Republic, William George Ward]|
+[Knights of Columbus, Studentenverbindung, Knights of Labor, St. Vincent de Paul Church (Manhattan), Omega Psi Phi, Lambda Theta Phi, Sacred Heart Catholic Church (McCartyville, Ohio), Felix Frankfurter, Stanislas du Lac, William George Ward]|
 |
 [content]
 THE RESIDENTS Don Knotts took over from Norman Fell as the resident landlord on this sitcom[content]
 Three's Company[content]
-[Don Knotts, Three's Company, John Ritter, San Pedro, Laguna, Tim Conway, Bill Bixby, County Mayo, Francisco Tenamaztle, Leonard Rossiter, Image:FEMA - 1807 - Photograph by Robert A. Eplett taken on 01-17-1994 in California.jpg|thum]|
+[Don Knotts, Three's Company, John Ritter, San Pedro, Laguna, Tim Conway, Bill Bixby, Francisco Tenamaztle, Milt Jackson, County Mayo, Social class in Ecuador]|
 |
 [content]
 STATE OF THE ART MUSEUM (Alex: We'll give you the museum. You give us the state.) The Naples Museum of Art[content]
 Florida[content]
-[Bhavacakra, Red Jacket, Michael Bierut, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Tracey Emin, Nativity scene, Newseum, Terre Haute, Indiana, Narasimha, Devon Dikeou]|
+[Bhavacakra, Red Jacket, Michael Bierut, Nativity scene, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Narasimha, Tracey Emin, Terre Haute, Indiana, Devon Dikeou, Affandi]|
 |
 [content]
 STATE OF THE ART MUSEUM (Alex: We'll give you the museum. You give us the state.) The Georgia O'Keeffe Museum[content]
 New Mexico[content]
-[Alfred Stieglitz, Edward Hopper, Bhavacakra, Henry Hart (musician), Yousuf Karsh, Red Jacket, Robert Altman (photographer), Michael Bierut, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, John Mellencamp]|
+[Alfred Stieglitz, Edward Hopper, Bhavacakra, Henry Hart (musician), Yousuf Karsh, Red Jacket, Michael Bierut, Robert Altman (photographer), Museum of Modern Art, Chet Atkins]|
 |
 [content]
 NEWSPAPERS Daniel Hertzberg & James B. Stewart of this paper shared a 1988 Pulitzer for their stories about insider trading[content]
 The Wall Street Journal[content]
-[The Wall Street Journal, Newseum, The Baltimore Sun, Michael Milken, Los Angeles Times, William Jardine (merchant), The Atlanta Journal-Constitution, The Washington Post, Dow Jones & Company, Hedrick Smith]|
+[The Wall Street Journal, The Baltimore Sun, Michael Milken, Los Angeles Times, The Atlanta Journal-Constitution, Newseum, The Washington Post, William Jardine (merchant), Hedrick Smith, The Hutchinson News]|
 |
 [content]
 SERVICE ORGANIZATIONS In 1843 Isaac Dittenhoefer became the first pres. of this Jewish club whose name means "children of the covenant"[content]
 B'nai B'rith[content]
-[B'nai B'rith, Schwabacher Brothers, Mormonism, Wandering Jew, Kaddish, Hampton-in-Arden, Isaac Asimov, Cave of the Patriarchs, David Ben-Gurion, Congregation Beth Israel-Judea]|
+[B'nai B'rith, Schwabacher Brothers, Wandering Jew, Kaddish, Alice Heine, Hampton-in-Arden, History of the Jews in Colonial America, History of the Jews in Colonial America, Cave of the Patriarchs, Congregation Beth Israel-Judea]|
 |
 [content]
 CAMBODIAN HISTORY & CULTURE Not to be confused with karma, krama is a popular accessory sold in cambodia; the word means "scarf" in this national language of Cambodia[content]
 Khmer language[content]
-[Politics of Cambodia, Khmer language, History of Cambodia, Siem Reap, Ikat, Khmer Rouge, Economy of Cambodia, Ho Chi Minh City, Indies, Reamker]|
+[Politics of Cambodia, History of Cambodia, Khmer language, Siem Reap, Ikat, Khmer Rouge, Norodom Buppha Devi, Economy of Cambodia, Ho Chi Minh City, Reamker]|
 |
 [content]
 CAMBODIAN HISTORY & CULTURE Phnom Penh's notorious gridlock is circumvented by the nimble tuk-tuk, a motorized taxi that's also known as an auto this, a similar Asian conveyance.[content]
 Rickshaw[content]
-[Siem Reap, Cycle rickshaw, Khmer language, Mekong, Khmer Rouge, History of Cambodia, Music of Barbados, Olympic Stadium (Phnom Penh), Transport in Cambodia, Economy of Cambodia]|
+[Siem Reap, Cycle rickshaw, Khmer language, Mekong, Olympic Stadium (Phnom Penh), Khmer Rouge, History of Cambodia, Music of Barbados, Transport in Cambodia, Economy of Cambodia]|
 |
 [content]
 '80s NO.1 HITMAKERS 1988: "Man In The Mirror"[content]
 Michael Jackson[content]
-[Fontana Records, Them Again, Judy Rodman, Funk metal, Belinda (Belinda Carlisle album), Lockheed P-80 Shooting Star, Mark Fosson, Nikki & Rich, Lou Bega, The Kids from "Fame"]|
+[Them Again, Fontana Records, Music of Zimbabwe, E2-E4, KMMX, Lockheed P-80 Shooting Star, Judy Rodman, David I. Shapiro, Barry Banks (rugby league), Fatah Nsaief]|
 |
 [content]
 GOLDEN GLOBE WINNERS In 2009: Sookie Stackhouse[content]
 Anna Paquin[content]
-[Anna Paquin, Jimmy Harry, Warren Beatty, One Chance (film), Paul Le Mat, Geoffrey Rush, Joan Plowright, Jim Broadbent, Helen Hunt, Sally Kirkland]|
+[Anna Paquin, Jimmy Harry, Paul Le Mat, Warren Beatty, Joan Plowright, Geoffrey Rush, One Chance (film), Jim Broadbent, Sally Kirkland, Helen Hunt]|
 |
 [content]
 AFRICAN-AMERICAN WOMEN In an essay defending this 2011 film, Myrlie Evers-Williams said, "My mother was" this film "& so was her mother"[content]
 The Help[content]
-[Penny Marshall, Medgar Evers, Phoebe Cates, Hans Zimmer, Bessie Coleman, Zora Neale Hurston, Gloria Steinem, Chloë Sevigny, Al Lewis (actor), Scottsboro Boys]|
+[Penny Marshall, Meagan Good, Medgar Evers, Touched (play), Joyce Maynard, Douglas Coupland, Halle Berry, Otto Preminger, Memory play, Kathy Acker]|
 |
 [content]
 THE RESIDENTS Kinch, Carter & LeBeau were all residents of Stalag 13 on this TV show[content]
 Hogan's Heroes[content]
-[Hogan's Heroes, John Carter (ER), Cincinnati Bengals, Gary Burghoff, File:Scott Lab OSU.jpg|thumb|350px|left|Scott Laboratory, housing the Mechanical and Aerospace Engineering department. This facility is a joint effort between BHDP Architecture and Polshek Partnership Architect, Episode Six, Scottsboro Boys, Paul Oakenfold, Jerry Brown, Georgia (U.S. state)]|
+[Hogan's Heroes, John Carter (ER), Cincinnati Bengals, Gary Burghoff, File:Scott Lab OSU.jpg|thumb|350px|left|Scott Laboratory, housing the Mechanical and Aerospace Engineering department. This facility is a joint effort between BHDP Architecture and Polshek Partnership Architect, Episode Six, Western Wisconsin Derecho, Scottsboro Boys, Peshtigo, Wisconsin, David Copperfield (illusionist)]|
 |
 [content]
 CAPITAL CITY CHURCHES (Alex: We'll give you the church. You tell us the capital city in which it is located.) Matthias Church, or Matyas Templom, where Franz Joseph was crowned in 1867[content]
 Budapest[content]
-[History of Buda Castle, File:AquincM4.jpg|thumb||Aquincum Museum (Aquincum was the capital of the Roman province , Olomouc, Edessa, Saint Matthias, Corleone, Defenestrations of Prague, John the Baptist, Pope, Votive Church, Vienna]|
+[History of Buda Castle, File:AquincM4.jpg|thumb||Aquincum Museum (Aquincum was the capital of the Roman province , Corleone, Olomouc, John the Baptist, Edessa, Saint Matthias, Defenestrations of Prague, Munich, Votive Church, Vienna]|
 |
 [content]
 BROADWAY LYRICS Song that says, "you make me smile with my heart; your looks are laughable, unphotographable"[content]
 My Funny Valentine[content]
-[Bess, You Is My Woman Now, Hello, Hawaii, How Are You?, Oklahoma!, Jesus Christ Superstar (film), The Lamb Lies Down on Broadway, Mack Gordon, Irving Berlin, Oscar Hammerstein II, BE (Pain of Salvation album), Jerome Kern]|
+[Bess, You Is My Woman Now, Hello, Hawaii, How Are You?, Animal Crackers (musical), Oklahoma!, Jesus Christ Superstar (film), Mack Gordon, The Lamb Lies Down on Broadway, BE (Pain of Salvation album), Irving Berlin, Oscar Hammerstein II]|
 |
 [content]
 "TIN" MEN You can't mention this shortstop without mentioning his double-play associates Evers & Chance[content]
 Joe Tinker[content]
-[Triple play, Paul Molitor, Charlie Gehringer, Hughie Jennings, Honus Wagner, Moe Berg, Humphrey Bogart, Joe Tinker, A Few Questions, Rogers Hornsby]|
+[Triple play, Charlie Gehringer, Hughie Jennings, Paul Molitor, Honus Wagner, Moe Berg, Rogers Hornsby, Joe Tinker, Humphrey Bogart, A Few Questions]|
 |
 [content]
 RANKS & TITLES Italian for "leader", it was especially applied to Benito Mussolini[content]
 Duce[content]
-[Duce, Neo-fascism, Vilfredo Pareto, Alessandra Mussolini, Fascism in Europe, Ismet Popovac, Foreign relations of Italy, Eoin O'Duffy, Trento, Cult of personality]|
+[Duce, Fascist and anti-Fascist violence in Italy (1919–26), Neo-fascism, Vilfredo Pareto, Fascism in Europe, Alessandra Mussolini, Agostino Lanzillo, Romano Mussolini, Eoin O'Duffy, Foreign relations of Italy]|
 |
 [content]
 NOTES FROM THE CAMPAIGN TRAIL In "The Deadlocked Election of 1800", James R. Sharp outlines the fall of this dueling vice president[content]
 Aaron Burr[content]
-[Richard Mentor Johnson, Aaron Burr, William O. Douglas, Kit Bond, John C. Breckinridge, Society of the Army of Santiago de Cuba, Vietnam War, John DeLorean, Republican Party presidential primaries, 1976, Elliott Roosevelt]|
+[Richard Mentor Johnson, Aaron Burr, Society of the Army of Santiago de Cuba, William O. Douglas, John C. Breckinridge, Kit Bond, James Bowie, Republican Party presidential primaries, 1976, Elliott Roosevelt, George McGovern]|
 |
 [content]
 POTPOURRI Large specimens of this marsupial can leap over barriers 6 feet high[content]
 Kangaroo[content]
-[Kangaroo, Fauna of Australia, Tammar wallaby, Velociraptor, Koala, Kakapo, Adobe Creek (near Los Altos, California), Agathis australis, Sequoiadendron giganteum, Penny-farthing]|
+[Kangaroo, Fauna of Australia, Tammar wallaby, Koala, Velociraptor, Kakapo, Adobe Creek (near Los Altos, California), Agathis australis, Long jump, Penny-farthing]|
 |
 [content]
 HISTORICAL HODGEPODGE It was the peninsula fought over in the peninsular war of 1808 to 1814[content]
 Iberia|Iberian Peninsula[content]
-[Ferdinand VII of Spain, Napoleonic Wars, History of Spain, War of the Sixth Coalition, Battle of Roliça, FitzRoy Somerset, 1st Baron Raglan, Vicente Genaro de Quesada, Godfrey Macdonald, 3rd Baron Macdonald of Slate, Battle of Lundy's Lane, 1800s (decade)]|
+[Ferdinand VII of Spain, Napoleonic Wars, History of Spain, Vicente Genaro de Quesada, Godfrey Macdonald, 3rd Baron Macdonald of Slate, Battle of Roliça, War of the Sixth Coalition, FitzRoy Somerset, 1st Baron Raglan, Battle of Lundy's Lane, 1800s (decade)]|
 |
 [content]
 NEWSPAPERS Early in their careers, Mark Twain & Bret Harte wrote pieces for this California city's Chronicle[content]
 San Francisco[content]
-[Bret Harte, Joaquin Miller, 1860 Wiyot Massacre, Dave Meltzer, Ken Howard, George Carlin, Kurt Vonnegut, Kansas City Royals, Herman Charles Bosman, William Randolph Hearst]|
+[Bret Harte, Joaquin Miller, 1860 Wiyot Massacre, Dave Meltzer, Ken Howard, Kurt Vonnegut, Kansas City Royals, George Carlin, Herman Charles Bosman, Chuck Austen]|
 |
 [content]
 THE RESIDENTS Title residence of Otter, Flounder, Pinto & Bluto in a 1978 comedy[content]
 Animal House[content]
-[Animal House, Bluto, National Lampoon (magazine), Flounder, Cheech & Chong, Bozo the Clown, British Central Africa Protectorate, Ecology of the San Francisco Estuary, Claudia Galli, Gigging]|
+[Animal House, National Lampoon (magazine), Bluto, Flounder, Cheech & Chong, Ecology of the San Francisco Estuary, Bozo the Clown, British Central Africa Protectorate, Scott & Muriel, Claudia Galli]|
 |
 [content]
 COMPLETE DOM-INATION(Alex: Not "domination.") This New Orleans venue reopened Sept. 25, 2006[content]
 Mercedes-Benz Superdome|The Superdome[content]
-[Mercedes-Benz Superdome, Tameside Hippodrome, Louis Armstrong New Orleans International Airport, Saenger Theatre (New Orleans, Louisiana), Jimmy Walter, HMV, Shreveport Symphony Orchestra, Hammersmith Apollo, The Strokes, Paul Gregg]|
+[Mercedes-Benz Superdome, Saenger Theatre (New Orleans, Louisiana), Tameside Hippodrome, Jimmy Walter, Louis Armstrong New Orleans International Airport, Xavier University of Louisiana, Wesley Barrow Stadium, HMV, Stade Mohamed V, Snug Harbor (jazz club)]|
 |
 [content]
 NAME THE PARENT COMPANY Fisher-Price toys[content]
 Mattel[content]
-[Little People, Hasbro, Mattel, Toy Town Museum, Buzzy Bee, Arthur Treacher's, Super Friends, Cabbage Patch Kids, Powel Crosley, Jr., Pixar]|
+[Little People, Hasbro, Mattel, Toy Town Museum, Buzzy Bee, Arthur Treacher's, Super Friends, Powel Crosley, Jr., Cabbage Patch Kids, Pixar]|
 |
 [content]
 POTPOURRI One of the N.Y. Times' headlines on this landmark 1973 Supreme Court decision was "Cardinals shocked"[content]
 Roe v. Wade[content]
-[Regents of the University of California v. Bakke, Griswold v. Connecticut, Miller v. California, Byron White, Caveat emptor, Clear and present danger, Romer v. Evans, Roe v. Wade, William J. Brennan, Jr., Lambda Legal]|
+[Regents of the University of California v. Bakke, Griswold v. Connecticut, Miller v. California, Caveat emptor, Byron White, Clear and present danger, Romer v. Evans, Roe v. Wade, Civil liberties, New York Supreme Court]|
 |
 [content]
 NAME THE PARENT COMPANY Post-it notes[content]
 3M[content]
-[US Airways Group, Bank of China (Hong Kong), Enterprise Rent-A-Car, Quebecor, Newcastle Emlyn, Annie (musical), George Costanza, Accuracy in Media, Huw Edwards (conductor), William Dean Singleton]|
+[US Airways Group, Bank of China (Hong Kong), Newcastle Emlyn, William Dean Singleton, Quebecor, Quality Comics, Accuracy in Media, George Costanza, Lake Mistassini, Huw Edwards (conductor)]|
 |
 [content]
 STATE OF THE ART MUSEUM (Alex: We'll give you the museum. You give us the state.) The Sun Valley Center for the Arts[content]
 Idaho[content]
-[Red Jacket, Terre Haute, Indiana, Narasimha, Bhavacakra, Edward Hopper, My Neighbor Totoro, Chinatown, Los Angeles, Phoenix, Arizona, Museum of Contemporary Art, Chicago, Louisiana State University]|
+[Red Jacket, Terre Haute, Indiana, Narasimha, Bhavacakra, Edward Hopper, Chinatown, Los Angeles, Louisiana State University, Phoenix, Arizona, My Neighbor Totoro, Northern Arizona University]|
 |
 [content]
 UCLA CELEBRITY ALUMNI Attending UCLA in the '60s, he was no "Meathead", he just played one later on television[content]
 Rob Reiner[content]
-[Rob Reiner, James Dean, Kareem Abdul-Jabbar, Heather Locklear, Lionel Richie, Animal Crackers (film), University of California, Los Angeles, Ron Pitts, Jeff Cohen (actor), Daniel Baldwin]|
+[Rob Reiner, James Dean, Kareem Abdul-Jabbar, Ron Pitts, Animal Crackers (film), Lionel Richie, University of California, Los Angeles, Heather Locklear, Walter Koenig, Jeff Cohen (actor)]|
 |
 [content]
 NAME THE PARENT COMPANY Jell-O[content]
 Kraft Foods[content]
-[Jell-O, Cold Stone Creamery, Arch West, Olive loaf, Jelling stones, Camp Roger, Don Wilson (announcer), James Beard, 3rd Rock from the Sun, Jello mold]|
+[Jell-O, Cold Stone Creamery, Arch West, Olive loaf, Jelling stones, Jello mold, Camp Roger, 3rd Rock from the Sun, James Beard, Don Wilson (announcer)]|
 |
 [content]
 '80s NO.1 HITMAKERS 1989: "Miss You Much"[content]
 Janet Jackson[content]
-[Fontana Records, Them Again, Judy Rodman, Funk metal, Belinda (Belinda Carlisle album), Lockheed P-80 Shooting Star, Mark Fosson, Nikki & Rich, Lou Bega, The Kids from "Fame"]|
+[Them Again, Fontana Records, Music of Zimbabwe, E2-E4, KMMX, Lockheed P-80 Shooting Star, Judy Rodman, David I. Shapiro, Barry Banks (rugby league), Fatah Nsaief]|
 |
 [content]
 COMPLETE DOM-INATION(Alex: Not "domination.") This Wisconsin city claims to have built the USA's only granite dome[content]
 Madison[content]
-[El Capitolio, Yosemite Valley, Madison, Wisconsin, Saint Isaac's Cathedral, Volkshalle, Frank Zeidler, Hudson County Courthouse, Chrysler Building, Blackstone Library, Milwaukee Road 261]|
+[El Capitolio, Madison, Wisconsin, Saint Isaac's Cathedral, Yosemite Valley, Volkshalle, Frank Zeidler, Piazza San Marco, Hudson County Courthouse, Gendarmenmarkt, Chrysler Building]|
 |
 [content]
 AFRICAN CITIES This port is the southernmost of South Africa's 3 capitals[content]
 Cape Town[content]
-[Zanzibar, Urbanization in Africa, Dakar, Luanda, History of Africa, Monrovia, Cape Town, Khartoum, Transport in Lesotho, Economy of Namibia]|
+[Zanzibar, Urbanization in Africa, Dakar, Monrovia, History of Africa, Luanda, Cape Town, Pylos, Transport in Lesotho, Image:Mozambique n2.jpg|thumb|right|The Island of Mozambique was first occupied ]|
 |
 [content]
 I'M BURNIN' FOR YOU France's Philip IV--known as "The Fair"--had Jacques De Molay, the last Grand Master of this order, burned in 1314[content]
 Knights Templar[content]
-[Philip IV of France, Knights Templar, Charles IV of France, Ferdinand IV of Castile, Conciergerie, Colonna family, Louis IV, Holy Roman Emperor, John of Bohemia, List of Navarrese monarchs, Louis XIII of France]|
+[Philip IV of France, Knights Templar, Ferdinand IV of Castile, Charles IV of France, Louis IV, Holy Roman Emperor, Conciergerie, Colonna family, John of Bohemia, Louis XIII of France, Louis XIV of France]|
 |
 [content]
 HISTORICAL QUOTES After the fall of France in 1940, this general told his country, "France has lost a battle. But France has not lost the war"[content]
 Charles de Gaulle|de Gaulle[content]
-[File:Češi vyhnaní z pohraničí hledají nový domov.jpg|thumb|300px|right|Czechs expelled from the border looking for new home, October 19, Philippe Pétain, Hubert Lyautey, Leopold III of Belgium, Vo Nguyen Giap, William Dodd (ambassador), Alexandrine of Mecklenburg-Schwerin, Joachim von Ribbentrop, Charles de Gaulle, Anthony Eden]|
+[File:Češi vyhnaní z pohraničí hledají nový domov.jpg|thumb|300px|right|Czechs expelled from the border looking for new home, October 19, Philippe Pétain, Hubert Lyautey, Leopold III of Belgium, William Dodd (ambassador), Vo Nguyen Giap, Alexandrine of Mecklenburg-Schwerin, Joachim von Ribbentrop, Charles de Gaulle, Operation Felix]|
 |
 [content]
 SERVICE ORGANIZATIONS Originally this club's emblem was a wagon wheel; now it's a gearwheel with 24 cogs & 6 spokes[content]
 Rotary International[content]
-[De Poelen, Dronrijp, De Mearmin, Dokkum, Chevrolet Impala, Hammer and sickle, Chevrolet Celebrity, Pontiac, AMC Matador, Ambulance, Buick Century, Penny-farthing]|
+[De Poelen, Dronrijp, De Mearmin, Dokkum, Hammer and sickle, Chevrolet Impala, Chevrolet Celebrity, Pontiac, AMC Matador, Buick Century, Penny-farthing, Ambulance]|
 |
 [content]
 CONSERVATION Indonesia's largest lizard, it's protected from poachers, though we wish it could breathe fire to do the job itself[content]
 Komodo dragon[content]
-[Komodo dragon, United Kingdom general election, February 1974, Alaungdaw Kathapa National Park, Dragon (Middle-earth), Tony Fitzjohn, Affirmative action in the United States, Sleep (non-human), Rainforest, Bloom County, Bonar Law]|
+[Komodo dragon, United Kingdom general election, February 1974, Affirmative action in the United States, Sleep (non-human), Alaungdaw Kathapa National Park, Places in The Hitchhiker's Guide to the Galaxy, Dragon (Middle-earth), File:2009 European Parliament Composition.svg|thumb|Seating in the 2009 European Parliame, Tony Fitzjohn, Privatisation of British Rail]|
 |
 [content]
 NEWSPAPERS The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation[content]
 The Washington Post[content]
-[Media of the United States, The Wall Street Journal, William Randolph Hearst, The Washington Post, Los Angeles Times, Harte Hanks, Jeff Sharlet (activist), Irish Independent, The New York Sun, Madison, Wisconsin]|
+[Media of the United States, The Wall Street Journal, William Randolph Hearst, The Washington Post, Los Angeles Times, Harte Hanks, Irish Independent, Jeff Sharlet (activist), The New York Sun, Houston Chronicle]|
 |
 [content]
 GREEK FOOD & DRINK This clear Greek liqueur is quite potent, so it's usually mixed with water, which turns it white & cloudy[content]
 Ouzo[content]
-[Ouzo, Anise, List of coffee beverages, Mentha, Fennel, File:Pasta alla Norma (2563876877).jpg|thum, Rakı, Liqueur, Cashew, Pomegranate]|
+[Ouzo, Anise, List of coffee beverages, Fennel, Mentha, Liqueur, File:Pasta alla Norma (2563876877).jpg|thum, Rakı, Cashew, Pomegranate]|
 |
 [content]
 "TIN" MEN He earned the "fifth Beatle" nickname by producing all of the Beatles' albums[content]
 George Martin[content]
-[Fifth Beatle, George Martin, Golden Earring, Apu Nahasapeemapetilon, Monty Python, Radiohead, Ringo Starr, Todd Rundgren, Little Richard, Harry Nilsson]|
+[Fifth Beatle, George Martin, Golden Earring, Apu Nahasapeemapetilon, Monty Python, Ringo Starr, Radiohead, Todd Rundgren, Little Richard, Stig Anderson]|
 |
 [content]
 CONSERVATION Early projects of the WWF, this organization, included work with the bald eagle & the red wolf[content]
 World Wide Fund|World Wide Fund for Nature[content]
-[Falconry, Golden Eagle, Itasca State Park, Maasai Mara, File:Woody Guthrie NYWTS.jpg|thumb|upright|left|alt=Half-length photo of a middle-aged man sitting in front of a closed door and playing a guitar and singing. His wavy black hair is partly covered by a black hat tipped at a rakish angle. He wears a striped flannel work shirt. His black guitar has a sign on it that says, "This machine kills fascists".|Roll on, Columbia, roll on, roll on, Columbia, roll on / Your power is turning our darkness to dawn / Roll on, Columbia, roll o, Lahore Zoo, Tundi Spring Agardy, Ferruginous Hawk, United States Fish and Wildlife Service, Yellowstone National Park]|
+[Falconry, Golden Eagle, Itasca State Park, Maasai Mara, File:Woody Guthrie NYWTS.jpg|thumb|upright|left|alt=Half-length photo of a middle-aged man sitting in front of a closed door and playing a guitar and singing. His wavy black hair is partly covered by a black hat tipped at a rakish angle. He wears a striped flannel work shirt. His black guitar has a sign on it that says, "This machine kills fascists".|Roll on, Columbia, roll on, roll on, Columbia, roll on / Your power is turning our darkness to dawn / Roll on, Columbia, roll o, Lahore Zoo, United States Fish and Wildlife Service, Tundi Spring Agardy, Ferruginous Hawk, Yellowstone National Park]|
 |
 [content]
 STATE OF THE ART MUSEUM (Alex: We'll give you the museum. You give us the state.) The Kalamazoo Institute of Arts[content]
 Michigan[content]
-[Michael Bierut, Bhavacakra, Portage Northern High School, Terre Haute, Indiana, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Red Jacket, Jill Magid, Pete Simpson, Agnes Martin, Boston Children's Chorus]|
+[Michael Bierut, Bhavacakra, Portage Northern High School, Red Jacket, Terre Haute, Indiana, File:WestBankBarrier443.jpg|right|thumb|Section of West Bank barrier located on Route 443, near Jerusalem. Painting was likely done by the official contractor."... Under painted arches one can glimpse expanses of green lawns and perpetually blue skies, painted by an artist on the gray concrete that hides the Arabs' homes." (Gideon Levy, "What You See and What You Don't on the Maccabim-Reut Highway to Jerussalem," Ha'aretz, 20 January 2005, Source: Journal of Palestine Studies, Vol. 34, No. 3 (Spring, 2005), pp. 113–11, Jill Magid, Devon Dikeou, Pete Simpson, Edward Hopper]|
 |
 [content]
 1920s NEWS FLASH! Nov. 28, 1929! This man & his chief pilot Bernt Balchen fly to South Pole! Yowza! You'll be an admirable admiral, sir![content]
 Richard Byrd|Richard E. Byrd[content]
-[1929, Keith Park, George Hyde (admiral), Alan Shepard, USS Missouri (BB-63), Jimmy Doolittle, Flag of New Zealand, Royal Australian Navy, North Pole, Blue Angels]|
+[1929, Keith Park, George Hyde (admiral), Alan Shepard, Royal Australian Navy, USS Missouri (BB-63), Flag of New Zealand, Jimmy Doolittle, North Pole, Bristol Aeroplane Company]|
 |
 [content]
 COMPLETE DOM-INATION(Alex: Not "domination.") This sacred structure dates from the late 600's A.D.[content]
 Dome of the Rock[content]
-[Izamal, Altun Ha, Tayasal (archaeological site), Svetitskhoveli Cathedral, Eadbald of Kent, Cologne Cathedral, Manbij, File:Spreading homo sapiens.svg|thumb|320px|Map of early human migrations[tpl]legend|#ff0000|Homo sapiens[/tp, Chichen Itza, Weather Report]|
+[Izamal, Altun Ha, Tayasal (archaeological site), Svetitskhoveli Cathedral, Eadbald of Kent, Manbij, Weather Report, Cologne Cathedral, Chichen Itza, File:Spreading homo sapiens.svg|thumb|320px|Map of early human migrations[tpl]legend|#ff0000|Homo sapiens[/tp]|
 |
 [content]
 CONSERVATION In 1980 China founded a center for these cute creatures in its bamboo-rich Wolong Nature Preserve[content]
 Panda|Giant panda[content]
-[Chengdu, Oil reserves in Southeast Asia, Monteverde Cloud Forest Reserve, Wild rice, Geography of China, House, Leopard, Academy of Natural Sciences of Drexel University, Primorsky Krai, Vietnamese cuisine]|
+[Chengdu, Geography of China, Oil reserves in Southeast Asia, Wild rice, Monteverde Cloud Forest Reserve, Primorsky Krai, Academy of Natural Sciences of Drexel University, Vietnamese cuisine, House, Leopard]|
 |
 [content]
 OLD YEAR'S RESOLUTIONS The Kentucky & Virginia resolutions were passed to protest these controversial 1798 acts of Congress[content]
 The Alien and Sedition Acts[content]
-[Kentucky and Virginia Resolutions, Second Continental Congress, Patrick Henry, Stamp Act 1765, Hartford Convention, John C. Breckinridge, History of slavery in Indiana, Richard Henry Lee, Solomon P. Sharp, Emancipation Proclamation]|
+[Kentucky and Virginia Resolutions, Patrick Henry, Second Continental Congress, Stamp Act 1765, Hartford Convention, John C. Breckinridge, History of slavery in Indiana, Solomon P. Sharp, Richard Henry Lee, Presbyterian Church (USA) disinvestment from Israel controversy]|
 |
 [content]
 RANKS & TITLES This person is the queen's representative in Canada; currently the office is held by David Johnston[content]
 Governor General of Canada[content]
-[Governor General of Canada, Order of Military Merit (Canada), Lincoln Alexander, Parliament of Canada, Charles Tupper, 100 Huntley Street, Brian Mulroney, Commonwealth Heads of Government Meeting, University of Calgary, House of Commons of Canada]|
+[Governor General of Canada, Order of Military Merit (Canada), Lincoln Alexander, Parliament of Canada, Charles Tupper, 100 Huntley Street, Harold Alexander, 1st Earl Alexander of Tunis, House of Commons of Canada, Brian Mulroney, Rector (academia)]|
 |
 [content]
 UCLA CELEBRITY ALUMNI This woman who won consecutive heptathlons at the Olympics went to UCLA on a basketball scholarship[content]
 Jackie Joyner-Kersee[content]
-[Jackie Joyner-Kersee, University of California, Los Angeles, Kareem Abdul-Jabbar, NC State Wolfpack men's basketball, Kevin Love, Bob Knight, Michigan Wolverines, Bellarmine-Jefferson High School, Maurice Greene (athlete), Wilma Rudolph]|
+[Jackie Joyner-Kersee, University of California, Los Angeles, NC State Wolfpack men's basketball, Kareem Abdul-Jabbar, Kevin Love, Michigan Wolverines, Bellarmine-Jefferson High School, Wilma Rudolph, Bob Knight, Maurice Greene (athlete)]|
 |
 [content]
 AFRICAN CITIES Wooden 2-story verandas in this Liberian capital are an architectural link to the U.S. south[content]
 Monrovia[content]
-[Monrovia, Liberia, Jug Tavern, Glenview Mansion, Architecture of India, William R. Tolbert, Jr., History of Liberia, Ellwood House, Staunton, Virginia, Annapolis, Maryland]|
+[Monrovia, Jug Tavern, Liberia, History of Liberia, Glenview Mansion, Americo-Liberian, Architecture of India, William R. Tolbert, Jr., Ellwood House, Delavan Terrace Historic District]|
 |
 [content]
 NOTES FROM THE CAMPAIGN TRAIL This bestseller about problems on the McCain-Palin ticket became an HBO movie with Julianne Moore[content]
 Game Change[content]
-[Game Change, Joe Lieberman, Margaret Cho, Jon Voight, Mark McKinnon, Michael Moore, Vice President of the United States, Gloria Steinem, Gina Gershon, Mark Sanford]|
+[Game Change, Joe Lieberman, Margaret Cho, Jon Voight, Mark McKinnon, Michael Moore, Vice President of the United States, Gloria Steinem, Gina Gershon, Ed O'Callaghan]|
 |
 [content]
 HE PLAYED A GUY NAMED JACK RYAN IN... "Patriot Games"; he's had other iconic roles, in space & underground[content]
 Harrison Ford[content]
-[Harrison Ford, Thora Birch, James Earl Jones, Racism in early American film, Bill Mumy, Walter Matthau, Candy Barr, Rolento, Adam West, Andrew Robinson (actor)]|
+[Harrison Ford, Thora Birch, James Earl Jones, Racism in early American film, Bill Mumy, Candy Barr, Walter Matthau, Andrew Robinson (actor), Adam West, Rolento]|
 |
 [content]
 GOLDEN GLOBE WINNERS 2011: Chicago mayor Tom Kane[content]
 Kelsey Grammer[content]
-[Willy Wonka, Gary Cooper, The Ninth Configuration, Bruce Willis, Tommy Lee Jones, Tom Wilkinson, Miranda Richardson, Larry McMurtry, Cybill, Steven Spielberg]|
+[Willy Wonka, The Ninth Configuration, Gary Cooper, Tom Wilkinson, Miranda Richardson, Steven Spielberg, Tommy Lee Jones, Bruce Willis, Cybill, Delores Taylor]|
 |
 [content]
 I'M BURNIN' FOR YOU Pierre Cauchon, Bishop of Beauvais, presided over the trial of this woman who went up in smoke May 30, 1431[content]
 Joan of Arc|Jeanne d'Arc[content]
-[File:Traité de Troyes.svg|300px|thumb|1415-1429[tpl]Legend|#ea8b9d|Territories controlled by Henry VI of England[/tp, Joan of Arc, Medieval Inquisition, Roman Catholic Diocese of Beauvais, Hippolyte Aucouturier, Aretha Franklin, Martin Sheen, Mount Pelée, François Villon, Tucker Carlson]|
+[File:Traité de Troyes.svg|300px|thumb|1415-1429[tpl]Legend|#ea8b9d|Territories controlled by Henry VI of England[/tp, Joan of Arc, Medieval Inquisition, Roman Catholic Diocese of Beauvais, Hippolyte Aucouturier, Beauvais, Rosa Parks, Martin Sheen, Herrin massacre, François Villon]|
 |
 [content]
 CEMETERIES On May 5, 1878 Alice Chambers was the last person buried in this Dodge City, Kansas cemetery[content]
 Boot Hill[content]
-[Doc Holliday, Boot Hill, George Law Curry, Panteón de Dolores, Robert Maitland O'Reilly, Henry Hart (musician), Edwin M. Shepard, Cremation, Gertrude Stein, Mormon Battalion]|
+[Doc Holliday, Boot Hill, Panteón de Dolores, George Law Curry, Henry Hart (musician), Robert Maitland O'Reilly, Edwin M. Shepard, Gertrude Stein, James E. Davis (councilman), James Cockburn (politician)]|
 |
 [content]
 "TIN" MEN He served in the KGB before becoming president & then prime minister of Russia[content]
 Vladimir Putin|Putin[content]
-[Vladimir Putin, Yuri Andropov, Boris Berezovsky (businessman), Mikhail Gorbachev, Rajiv Gandhi, Russian Armed Forces, Richard Crossman, Politics of Russia, Politics of Latvia, List of James Bond films]|
+[Vladimir Putin, Boris Berezovsky (businessman), Yuri Andropov, Mikhail Gorbachev, Rajiv Gandhi, Russian Armed Forces, Politics of Russia, Richard Crossman, Politics of Latvia, Keizō Obuchi]|
 |
 [content]
 POETS & POETRY She wrote, "My candle burns at both ends... but, ah, my foes, and oh, my friends--it gives a lovely light"[content]
 Edna St. Vincent Millay[content]
-[Margaret Avison, Nicole Brossard, Marina Tsvetaeva, Elinor Wylie, Edna St. Vincent Millay, Evelyn Lau, Leah Goldberg, Lisel Mueller, Shamim Azad, Poetry Bookshop]|
+[Margaret Avison, Nicole Brossard, Marina Tsvetaeva, Elinor Wylie, Leah Goldberg, Evelyn Lau, Poetry Bookshop, Edna St. Vincent Millay, Lisel Mueller, Derek Walcott]|
 |
 [content]
 OLD YEAR'S RESOLUTIONS Feb. 1, National Freedom Day, is the date in 1865 when a resolution sent the states an amendment ending this[content]
 Slavery|Slavery in the United States[content]
-[Emancipation Proclamation, Henry S. Foote, Pledge of Allegiance, Lambeth Conferences, Slavery in the United States, William O. Douglas, Zionism, International Telecommunication Union, Kentucky and Virginia Resolutions, History of Lebanon]|
+[Emancipation Proclamation, Henry S. Foote, Pledge of Allegiance, Lambeth Conferences, Slavery in the United States, Israeli Declaration of Independence, International Telecommunication Union, Kentucky and Virginia Resolutions, Thaddeus Stevens, William O. Douglas]|
 |
 [content]
 HE PLAYED A GUY NAMED JACK RYAN IN... "The Sum of All Fears"; he also won a screenwriting Oscar for "Good Will Hunting"[content]
 Ben Affleck[content]
-[Ben Affleck, Liev Schreiber, Gus Van Sant, Ron Rifkin, Miss Misery, William Goldman, Morgan Freeman, Chris Moore (film producer), Walter Matthau, Billy Wilder]|
+[Ben Affleck, Liev Schreiber, Ron Rifkin, Gus Van Sant, William Goldman, Miss Misery, Morgan Freeman, Walter Matthau, Billy Wilder, Shirley Jones]|
 |
 [content]
 THE QUOTABLE KEATS In an 1819 letter Keats wrote that this lord & poet "cuts a figure, but he is not figurative"[content]
 Lord Byron[content]
-[John Keats, La Belle Dame sans Merci, Hyperion (poem), Blank verse, Ode, Richard Monckton Milnes, 1st Baron Houghton, Edmund Spenser, Romanticism, Thomas Hood, John Clare]|
+[John Keats, La Belle Dame sans Merci, Hyperion (poem), Blank verse, Ode, Richard Monckton Milnes, 1st Baron Houghton, Adonis, Edmund Spenser, Romanticism, Maria White Lowell]|
 |
 [content]
 1920s NEWS FLASH! News flash! This less-than-yappy pappy is sixth veep to be nation's top dog after chief takes deep sleep![content]
 Calvin Coolidge[content]
-[Santa's Little Helper, Minas Tirith, Guide dog, Harry Nilsson, Stan (song), Teemu Selänne, Staffordshire, Belinda Carlisle, Point-and-shoot camera, Large Marge]|
+[Guide dog, Minas Tirith, Santa's Little Helper, Staffordshire, Brotherhood of Sleeping Car Porters, Harry Nilsson, Belinda Carlisle, Stan (song), Wolfman Jack, Teemu Selänne]|
 |
 [content]
 NOTES FROM THE CAMPAIGN TRAIL The Pulitzer-winning "The Making of the President 1960" covered this man's successful presidential campaign[content]
 JFK|John F. Kennedy[content]
-[Elmer Bernstein, Michael Dukakis, George McGovern, Hunter S. Thompson, James M. Cox, Revolving Door (advertisement), David Sheehan, Kathy Bates, Paul Coverdell, 1996 Republican National Convention]|
+[Michael Dukakis, David Sheehan, James M. Cox, Hunter S. Thompson, Revolving Door (advertisement), Paul Coverdell, Kathy Bates, 1996 Republican National Convention, William Safire, Billy Sunday]|
 |
 [content]
 '80s NO.1 HITMAKERS 1988: "Father Figure"[content]
 George Michael[content]
-[Fontana Records, Them Again, Judy Rodman, Funk metal, Belinda (Belinda Carlisle album), Lockheed P-80 Shooting Star, Mark Fosson, Nikki & Rich, Lou Bega, The Kids from "Fame"]|
+[Them Again, Fontana Records, Music of Zimbabwe, E2-E4, KMMX, Lockheed P-80 Shooting Star, Judy Rodman, David I. Shapiro, Barry Banks (rugby league), Fatah Nsaief]|
 |
 [content]
 NAME THE PARENT COMPANY Crest toothpaste[content]
 Procter & Gamble[content]
-[Crest (toothpaste), Toothpaste, Procter & Gamble, Air India (football club), Great North Eastern Railway, Trust in Luton, 186th Infantry Regiment (United States), Jane Wyman, The Age, Dina Merrill]|
+[Crest (toothpaste), Toothpaste, Procter & Gamble, Air India (football club), Trust in Luton, Great North Eastern Railway, 186th Infantry Regiment (United States), Jane Wyman, The Age, Kagu]|
 |
 [content]
 HISTORICAL HODGEPODGE In the 400s B.C. this Chinese philosopher went into exile for 12 years[content]
 Confucius[content]
-[Latin literature, Ezra, Dating creation, Zhang Binglin, Porphyry (philosopher), Panchen Lama, Numerology, Daphne Marlatt, Confucius, James Mill]|
+[Latin literature, Bernhard Karlgren, Numerology, Zhang Binglin, Ezra, Porphyry (philosopher), Dating creation, James Mill, Daphne Marlatt, Political philosophy]|
 |
 [content]
 AFRICAN-AMERICAN WOMEN When asked to describe herself, she says first & foremost, she is Malia & Sasha's mom[content]
 Michelle Obama[content]
-[Michelle Obama, Octavia E. Butler, Sara Jane Olson, Tippi Hedren, Tippi Hedren, Meagan Good, Anna Faris, Kathleen Hanna, Dana Plato, Billie Holiday]|
+[Michelle Obama, Octavia E. Butler, Sara Jane Olson, Tippi Hedren, Tippi Hedren, Meagan Good, Dana Plato, Kathleen Hanna, Billie Holiday, Anna Faris]|
 |
 [content]
 POETS & POETRY In 1787 he signed his first published poem "Axiologus"; axio- is from the Greek for "worth"[content]
 William Wordsworth[content]
-[George Crabbe, Bliss Carman, Agis of Argos, Friedrich Hölderlin, Horace, Anna Laetitia Barbauld, Lord Byron, William Wordsworth, Elizabeth Barrett Browning, Irish poetry]|
+[George Crabbe, Bliss Carman, Agis of Argos, Anna Laetitia Barbauld, Friedrich Hölderlin, Jackson Mac Low, Irish poetry, Horace, William Wordsworth, Luis Cernuda]|
 |
 [content]
 UCLA CELEBRITY ALUMNI This blonde beauty who reprised her role as Amanda on the new "Melrose Place" was a psychology major[content]
 Heather Locklear[content]
-[Heather Locklear, Melrose Place, Grant Show, Lisa Rinna, Courtney Thorne-Smith, Kristin Davis, Gina Gershon, Denise Richards, Walter Koenig, Legally Blonde (musical)]|
+[Heather Locklear, Melrose Place, Grant Show, Lisa Rinna, Courtney Thorne-Smith, Kristin Davis, Gina Gershon, Denise Richards, Thomas Calabro, Amy Lalonde]|
 |
 [content]
 AFRICAN-AMERICAN WOMEN Bessie Coleman, the first black woman licensed as a pilot, landed a street named in her honor at this Chicago airport[content]
 O'Hare|O'Hare International Airport[content]
-[Bessie Coleman, Ida Cox, Pilot (aeronautics), Lambert–St. Louis International Airport, Ethel Waters, Jackson, Mississippi, Lani Guinier, Myrna Loy, Louis Armstrong, History of Tallahassee, Florida]|
+[Bessie Coleman, Ida Cox, Pilot (aeronautics), Lani Guinier, Lambert–St. Louis International Airport, Ethel Waters, Jackson, Mississippi, Myrna Loy, History of Tallahassee, Florida, Louis Armstrong]|
 |
 [content]
 OLD YEAR'S RESOLUTIONS The practice of pre-authorizing presidential use of force dates to a 1955 resolution re: this island near mainland China[content]
 Taiwan[content]
-[Lin Sen, Taiwan, History of Cyprus, Taiwanization, History of the Republic of China, Taiwan Relations Act, China–United States relations, United Nations General Assembly Resolution 505, Kinmen, History of Oceania]|
+[Lin Sen, Taiwan, History of Cyprus, History of the Republic of China, Taiwanization, Taiwan Relations Act, United Nations General Assembly Resolution 505, China–United States relations, Kinmen, History of Oceania]|
 |
 [content]
 GOLDEN GLOBE WINNERS In 2009: Joker on film[content]
 Heath Ledger[content]
-[One Chance (film), Warren Beatty, Paul Le Mat, Geoffrey Rush, Helen Hunt, Jim Broadbent, Joan Plowright, Shirley MacLaine, Sally Kirkland, Olympia Dukakis]|
+[Jimmy Harry, Paul Le Mat, Warren Beatty, Geoffrey Rush, Joan Plowright, One Chance (film), Sally Kirkland, Jim Broadbent, Miranda Richardson, Helen Hunt]|
 |
 [content]
 POETS & POETRY One of his "Tales of a Wayside Inn" begins, "Listen, my children, and you shall hear of the midnight ride of Paul Revere"[content]
 Henry Wadsworth Longfellow[content]
-[Óláfs saga Tryggvasonar, Christian Bök, Fenton Johnson (poet), John Neihardt, Baxter Black, Robert Hilles, Metaphysical poets, Derek Walcott, Jacme Grils, Géza Gyóni]|
+[Óláfs saga Tryggvasonar, Christian Bök, John Neihardt, Baxter Black, Fenton Johnson (poet), Metaphysical poets, Robert Hilles, Derek Walcott, Jacme Grils, English poetry]|
 |
 [content]
 UCLA CELEBRITY ALUMNI Neurobiologist Amy Farrah Fowler on "The Big Bang Theory", in real life she has a Ph.D. in neuroscience from UCLA[content]
 Mayim Bialik[content]
-[Mayim Bialik, Howard Wolowitz, Blossom (TV series), Amy Fowler, Raj Koothrappali, Danica McKellar, Laurie Metcalf, Michael J. Massimino, Ira Flatow, Heidelberg University]|
+[Mayim Bialik, Howard Wolowitz, Amy Fowler, Blossom (TV series), Raj Koothrappali, Andrei Linde, Danica McKellar, Laurie Metcalf, Michael J. Massimino, Ira Flatow]|
 |
 [content]
 POTPOURRI In 2011 bell ringers for this charity started accepting digital donations to its red kettle[content]
 The Salvation Army|Salvation Army[content]
-[The Salvation Army, Pride London, Capital (radio network), Chadlington, Aloysius Society, Pró-Vida, Change ringing, St Andrew's Church, Tarvin, New York Stock Exchange, Agnes Scott College]|
+[The Salvation Army, Pride London, Aloysius Society, Pró-Vida, Change ringing, Capital (radio network), Chadlington, St Andrew's Church, Tarvin, Agnes Scott College, New York Stock Exchange]|
 |
 [content]
 "TIN" MEN This Italian painter depicted the "Adoration of the Golden Calf"[content]
 Tintoretto[content]
-[Nicolas Poussin, Themes in Italian Renaissance painting, Pietro Lorenzetti, Saint Casimir, Luca Signorelli, Édouard Manet, Hyacinthe Rigaud, History painting, Flatiron Building, Diego Velázquez]|
+[Nicolas Poussin, Themes in Italian Renaissance painting, Saint Casimir, Pietro Lorenzetti, Luca Signorelli, Édouard Manet, History painting, Hyacinthe Rigaud, Michelangelo, Flatiron Building]|
 |
 [content]
 HISTORICAL HODGEPODGE The Ammonites held sway in this Mideast country in the 1200s B.C. & the capital is named for them[content]
 Jordan[content]
-[Raichur district, Culture of Italy, Rabbah, History of Yemen, History of the Republic of Macedonia, Wilberforce University, Edessa, Amman, Count palatine, Periplus of the Erythraean Sea]|
+[Raichur district, Culture of Italy, Rabbah, History of Yemen, History of the Republic of Macedonia, Edessa, Wilberforce University, Count palatine, Amman, Periplus of the Erythraean Sea]|
 |
 [content]
 '80s NO.1 HITMAKERS 1980: "Rock With You"[content]
 Michael Jackson[content]
-[Fontana Records, Them Again, Judy Rodman, Funk metal, Belinda (Belinda Carlisle album), Lockheed P-80 Shooting Star, Mark Fosson, Nikki & Rich, Lou Bega, The Kids from "Fame"]|
+[Them Again, Fontana Records, Music of Zimbabwe, E2-E4, KMMX, Lockheed P-80 Shooting Star, Judy Rodman, David I. Shapiro, Barry Banks (rugby league), Fatah Nsaief]|
 |
 [content]
 UCLA CELEBRITY ALUMNI For the brief time he attended, he was a rebel with a cause, even landing a lead role in a 1950 stage production[content]
 James Dean[content]
-[James Dean, Humphrey Bogart, John Huston, Errol Flynn, Ricardo Montalbán, Randolph Scott, Natalie Wood, Grant Show, Theodore Dwight Weld, Charlton Heston]|
+[James Dean, Humphrey Bogart, John Huston, Errol Flynn, Grant Show, Randolph Scott, Theodore Dwight Weld, Natalie Wood, Ricardo Montalbán, Charlton Heston]|
 |
 [content]
 GOLDEN GLOBE WINNERS In 2001: The president of the United States on television[content]
 Martin Sheen[content]
-[Olympia Dukakis, James Whitmore, Celeste Holm, Geoffrey Rush, Larry McMurtry, George Stevens, Richard Dreyfuss, Fredric March, Jane Wyman, Edward James Olmos]|
+[Olympia Dukakis, Celeste Holm, James Whitmore, Geoffrey Rush, Larry McMurtry, Richard Dreyfuss, George Stevens, Edward James Olmos, Fredric March, Gregory Peck]|
 |
 [content]
 1920s NEWS FLASH! 1927! Gene Tunney takes a long count in the squared circle but rises to defeat this "Manassa Mauler"! Howzabout that![content]
 Jack Dempsey[content]
-[Jack Dempsey, Max Schmeling, New Jersey Route 37, Rock-paper-scissors, Lou Stillman, Big band, Charleston (dance), Tommy Gibbons, New Jersey Route 26, New Jersey Route 33]|
+[Jack Dempsey, Max Schmeling, New Jersey Route 37, Lou Stillman, Rock-paper-scissors, Big band, Charleston (dance), Tommy Gibbons, New Jersey Route 26, Paramount Records]|
 |
 [content]
 THE QUOTABLE KEATS Keats was quoting this Edmund Spenser poem when he told Shelley to "'load every rift' of your subject with ore"[content]
 The Faerie Queene[content]
-[Ode, John Keats, Edmund Spenser, Ozymandias, English poetry, John Milton, Blank verse, Wilfred Owen, W. B. Yeats, Edmund Blunden]|
+[Ode, John Keats, Edmund Spenser, Ozymandias, English poetry, John Milton, Edmund Blunden, Blank verse, Wilfred Owen, W. B. Yeats]|
 |
 [content]
 AFRICAN-AMERICAN WOMEN Rita Dove titled a collection of poems "On the Bus with" this woman[content]
 Rosa Parks[content]
-[Nellie Y. McKay, Louise Erdrich, Queen Latifah, Elizabeth Barrett Browning, Rosa Parks, Katherine Mansfield, University of Virginia, Lesbian, Inez Milholland, Beautiful Dreamer]|
+[Rosa Parks, Claudette Colvin, Mary Louise Smith (civil rights activist), Nellie Y. McKay, Joshua Beckman, Louise Erdrich, Will Success Spoil Rock Hunter?, Julie Dash, Queen Latifah, Sarah Keys v. Carolina Coach Company]|
 |
 [content]
 GREEK FOOD & DRINK The name of this dish of marinated lamb, skewered & grilled, comes from the Greek for "skewer" & also starts with "s"[content]
 Souvlaki[content]
-[Souvlaki, Awadhi cuisine, Serbian cuisine, Brazilian cuisine, Sausage, Dim sum, Breakfast, File:Pasta alla Norma (2563876877).jpg|thum, Korean cuisine, Diner]|
+[Souvlaki, Awadhi cuisine, Serbian cuisine, Brazilian cuisine, Sausage, Dim sum, Akçaabat meatballs, Breakfast, File:Pasta alla Norma (2563876877).jpg|thum, Jangan-gu]|
 |
 [content]
 HISTORICAL HODGEPODGE This member of the Nixon & Ford cabinets was born in Furth, Germany in 1923[content]
 Henry Kissinger[content]
-[Henry Kissinger, William B. Saxbe, Strom Thurmond, Richard Nixon, Eisaku Satō, United States presidential line of succession, Nixon (film), Zbigniew Brzezinski, John Connally, Théophile Delcassé]|
+[Henry Kissinger, William B. Saxbe, Strom Thurmond, United States presidential line of succession, Eisaku Satō, Richard Nixon, Zbigniew Brzezinski, Nixon (film), John Connally, Théophile Delcassé]|
 |
 [content]
 '80s NO.1 HITMAKERS 1983: "Beat It"[content]
 Michael Jackson[content]
-[Fontana Records, Them Again, Judy Rodman, Funk metal, Belinda (Belinda Carlisle album), Lockheed P-80 Shooting Star, Mark Fosson, Nikki & Rich, Lou Bega, The Kids from "Fame"]|
+[Them Again, Fontana Records, Music of Zimbabwe, E2-E4, KMMX, Lockheed P-80 Shooting Star, Judy Rodman, David I. Shapiro, Barry Banks (rugby league), Fatah Nsaief]|
 |
 [content]
 CAMBODIAN HISTORY & CULTURE The Royal Palace grounds feature a statue of King Norodom, who in the late 1800s was compelled to first put his country under the control of this European power; of course, it was sculpted in that country[content]
 France[content]
-[History of Cambodia, Politics of Cambodia, Image:Your Majesty! at your age....jpg|thumb|upright|A political cartoon pillorying Leopold's affair with Caroline Lacroi, Khmer Rouge, Majapahit, Travancore, Cult of personality, Gustave Rolin-Jaequemyns, Siem Reap, History of Madagascar]|
+[History of Cambodia, Politics of Cambodia, Image:Your Majesty! at your age....jpg|thumb|upright|A political cartoon pillorying Leopold's affair with Caroline Lacroi, Khmer Rouge, Travancore, Gustave Rolin-Jaequemyns, Majapahit, Siem Reap, Cult of personality, Stephen III of Moldavia]|
 |
 [content]
 GOLDEN GLOBE WINNERS In 2010: As Sherlock Holmes on film[content]
@@ -492,9 +492,9 @@ Robert Downey, Jr.[content]
 [content]
 GREEK FOOD & DRINK Because it's cured & stored in brine, this crumbly white cheese made from sheep's milk is often referred to as pickled cheese[content]
 Feta[content]
-[Feta, Norwegian cuisine, English cuisine, Breakfast, Australian cuisine, Sausage, Quark (dairy product), Serbian cuisine, Butter, Delicatessen]|
+[Feta, Norwegian cuisine, English cuisine, Breakfast, Sausage, Australian cuisine, Quark (dairy product), Serbian cuisine, Delicatessen, Butter]|
 |
 [content]
 HE PLAYED A GUY NAMED JACK RYAN IN... "The Hunt for Red October"; he went more comedic as Jack Donaghy on "30 Rock"[content]
 Alec Baldwin[content]
-[Alec Baldwin, 30 Rock (season 6), Boulder International Film Festival, Harrison Ford, USS Dallas (SSN-700), Sean Connery, HMS Sceptre (S104), Klaus Maria Brandauer, James Earl Jones, William Baldwin]|
+[Alec Baldwin, 30 Rock (season 6), Boulder International Film Festival, Harrison Ford, USS Dallas (SSN-700), William Baldwin, Late Night with Conan O'Brien, Malice (film), Sean Connery, James Earl Jones]|

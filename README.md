@@ -6,9 +6,8 @@
 Watson Engine:
 The simplest is to load the project in IntelliJ IDEA and run the WatsonEngine.java file.
 
-To run our project for the undergraduate version please click: ``WatsonEngine``
+To run our project for the undergraduate version please click: ``Watson Engine`` Or travel to the WatsonEngine.java file and "Run" the current file.
 
-To run our project for the graduate version please click: ``ImprovedWatsonEngine``
 
 To access the LLM based re-evaluation of the Engine's responses (graduate version) please open the following notebook: ``LLMEvaluation.ipynb``
 
